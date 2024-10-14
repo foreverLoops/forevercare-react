@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ body{
+    margin: 0%;
+    padding: 0%;
+    background-image:url(backgroundForm.webP) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  ;
+    font-family: "Merriweather", serif;
+    font-weight: 200;
+    font-style: normal;
+   
+
+} 
+
+.title{
+    font-size: 3em;
+    margin-left:25% ;
+
+}
+
+.form{
+    background:#56B5E3  ;
+    border-radius: 10px;
+    width: 55vw;
+    padding:30px;
+    margin-left: 150px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    backdrop-filter: blur(10px);     
+}
+
+
+/* this is the first section containing the information on the patients */
+
+
+
+
+
+.radio01{
+    display: flex;
+    flex-direction:row
+
+}
+
+img:hover{
+    transform: scale(1.1);
+    transition:1s ;
+}
+
+.fa-solid:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+section{
+    margin-top: 10px;
+    margin-bottom:10px ;
+    margin-right: 30px;
+}
+
+.info{
+    text-align: center;
+    margin-top: 10px ;
+    margin-bottom:10px ;
+    padding-bottom: 15px;  
+    padding-top: 15px;
+    width: 20vw;
+    background-color:#ffffff27 ;  
+    border-radius: 15px;
+    border:none;
+    font-size: 1em;
+    
+}
+
+
+
+
+.info2{
+    
+    margin-top: 20px ;
+    margin-bottom:20px ;
+}
+.info3{
+    margin-top:15px;
+    margin-bottom:20px
+}
+
+.info4{
+    margin-left: 7vw;
+    display: block;
+
+}
+
+
+
+
+.info-global{
+    width:25vw;
+    text-align:left;
+}
+
+label{
+    margin-left: 20px;
+    font-size: 30px;
+
+}
+
+.info-details{
+    display: inline-flex;
+}
+
+
+/* this is the second section of the information where the appointment is placed */
+
+p{
+    font-size: 20px;
+    margin:0 auto;
+    text-align: center;
+    text-decoration: underline;
+}
+
+h2{
+    margin-left: 170px;
+    margin-top: 50px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+   
+}
+
+input[type="radio"]{
+    cursor: pointer;
+    padding-right: 60px;
+    padding-left: 20px;
+}
+
+li{
+    margin-top:20px;
+    margin-bottom:5px;
+    margin-right:25px ;
+    padding-left: 20px;
+    font-size: 20px;
+    
+    
+    
+
+}
+
+.app1{
+    margin-left: 60px;
+
+}
+.app01{
+    margin-left: 40px;
+}
+
+.appoint{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+textarea{
+    text-align: center;
+    resize: none;
+    font-size:1em;
+    height: 20px;
+    background-color:#bbe6e438 ;  
+    border-radius: 10px;
+    border: none;
+    font-size: 1em;
+    text-align: center;
+    margin-left: 60px;
+    margin-top: 10px ;
+    margin-bottom:10px ;
+    padding-bottom: 15px;  
+    padding-top: 15px;
+    width: 20vw;
+    
+
+}
+
+
+
+/* 
+
+.month{
+    background-color: #6cdad4;
+    padding-top:25px ;
+    padding-bottom:25px ;
+}
+
+
+table{
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-left: 20px;
+    width:50vw;
+    margin:20px  ;
+    padding: 20px;
+}
+
+td{
+    background-color:rgba(245, 245, 245, 0.644);
+    box-shadow: 0px 0px 5px 2px rgb(255, 255, 255);
+    color:black;
+    padding:15px 10px;
+    text-align: center;
+}
+.pass{
+    color: rgb(110, 110, 110);
+}
+
+td:nth-child(7n) {
+    color: #ff685d;
+  }
+td:hover{
+    background-color: #ffffff34;
+    cursor: pointer;
+}
+
+
+.date{
+    display: flex;
+    flex-direction: row;
+}
+
+ */
+
+input[type="time"]{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    width:80px;
+    font-size: 1rem;
+}
+
+.submit_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+button[type="submit"]{
+    padding-top:20px ;
+    padding-bottom:20px ;
+    padding-left:20px ;
+    padding-right:20px ;
+    border-radius: 10px;
+    box-shadow:0 12px 16px 0 #2fc86ca4 0 17px 50px 0 #abe0ee;
+    cursor: pointer;
+    margin-bottom: 20px;
+    background-color: #6cdad4;
+
+}
+
+button:hover{
+    
+    box-shadow:0 0 3px 2px #6cdad4 ;
+
+}
+.app01{
+    justify-content: space-between;
+}
+
+
+.app-time{
+    display: block;
+    padding:10px;
+    margin-bottom: 25px;
+}
+
+.time{
+    margin-left: 15vw;
+   
+}
+
+
+
+
