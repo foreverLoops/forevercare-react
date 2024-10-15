@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import AboutUs from './pages/aboutUs/AboutUs';
+
 import Appointment from './pages/appointment/Appointment';
 <<<<<<< HEAD
 import { UserFeedbackForm } from './pages/appointment/UserFeedbackform';
@@ -10,7 +11,7 @@ import { UserFeedbackForm } from './pages/appointment/UserFeedbackform';
 function App() {
   return (
     <div className="App">
-      {/* <AboutUs/> */}
+      <AboutUs/>
       {/* <Appointment/> */}
       {/* <UserFeedbackForm/> */}
     </div>
