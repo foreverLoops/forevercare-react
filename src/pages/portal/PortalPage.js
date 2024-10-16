@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import './PortalPage.css'
 export default function PortalPage() {
   return (
     
+
     <div id="container-portal" >
       <nav class="navbar-container">
       <ul class="navbar">
@@ -23,15 +24,15 @@ export default function PortalPage() {
 
       <nav class="sidebar-container">
         <ul class="sidebar">
-          <Link>Appointments</Link>
-          <Link>Clinical Summary</Link>
-          <Link>Documents</Link>
-          <Link>library</Link>
-          <Link>Medications</Link>
-          <Link>Messages</Link>
-          <Link>Timeline</Link>
-          <Link>Visits</Link>
-          <Link>Wellness</Link>
+          <Link className="sideLink">Appointments</Link>
+          <Link className="sideLink">Clinical Summary</Link>
+          <Link className="sideLink">Documents</Link>
+          <Link className="sideLink">library</Link>
+          <Link className="sideLink">Medications</Link>
+          <Link className="sideLink">Messages</Link>
+          <Link className="sideLink">Timeline</Link>
+          <Link className="sideLink">Visits</Link>
+          <Link className="sideLink">Wellness</Link>
         </ul>
       </nav>
 

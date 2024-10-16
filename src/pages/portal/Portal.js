@@ -6,9 +6,9 @@ let display = document.querySelector(".display");
 
 display.innerHTML = notice;
 
-rightSidebarLinks[0].addEventListener("click",function() {
-    display.innerHTML = appointments;
-});
+// rightSidebarLinks[0].addEventListener("click",function() {
+//     display.innerHTML = appointments;
+// });
 
 rightSidebarLinks[1].addEventListener("click",function() {
     display.innerHTML = clinicalSummary;
@@ -18,9 +18,9 @@ rightSidebarLinks[2].addEventListener("click",function() {
     display.innerHTML = documents;
 });
 
-rightSidebarLinks[3].addEventListener("click",function() {
-    display.innerHTML = library;
-});
+// rightSidebarLinks[3].addEventListener("click",function() {
+//     display.innerHTML = library;
+// });
 
 rightSidebarLinks[4].addEventListener("click",function() {
     display.innerHTML = medications;
