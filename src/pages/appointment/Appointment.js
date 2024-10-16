@@ -1,6 +1,8 @@
 import React from 'react'
 import "./appointmentStyles.css"
 
+
+
 export default function Appointment() {
   return (
     <>
@@ -81,6 +83,12 @@ export default function Appointment() {
 
               
                 </section>
+
+                <div class="app-time" >
+                            <label class="time" >Time of the Appointment:
+                                <input type="datetime-local" required/>
+                            </label>
+                        </div>
                 
                
                     
