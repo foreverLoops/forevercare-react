@@ -1,14 +1,16 @@
-import React from 'react'
-
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './PortalPage.css'
 export default function PortalPage() {
   return (
     
+
     <div id="container-portal" >
       <nav class="navbar-container">
       <ul class="navbar">
-        <a href="#">Online Store</a>
-        <a href="#">Send Message</a>
-        <a href="/public/appointment.html">Request Appointment</a>
+        <Link className="navLink">Online Pharmacy</Link>
+        <Link className="navLink">Send Message</Link>
+        <Link className="navLink">Request Appointment</Link>
       </ul>
     </nav>
     <section class="container">
@@ -22,15 +24,15 @@ export default function PortalPage() {
 
       <nav class="sidebar-container">
         <ul class="sidebar">
-          <li>Appointments</li>
-          <li>Clinical Summary</li>
-          <li>Documents</li>
-          <li>Library</li>
-          <li>Medications</li>
-          <li>Messages</li>
-          <li>Timeline</li>
-          <li>Visits</li>
-          <li>Wellness</li>
+          <Link className="sideLink">Appointments</Link>
+          <Link className="sideLink">Clinical Summary</Link>
+          <Link className="sideLink">Documents</Link>
+          <Link className="sideLink">library</Link>
+          <Link className="sideLink">Medications</Link>
+          <Link className="sideLink">Messages</Link>
+          <Link className="sideLink">Timeline</Link>
+          <Link className="sideLink">Visits</Link>
+          <Link className="sideLink">Wellness</Link>
         </ul>
       </nav>
 
