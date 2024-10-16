@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import AboutUs from './pages/aboutUs/AboutUs';
-
 import Appointment from './pages/appointment/Appointment';
 import PortalPage from './pages/portal/PortalPage';
 
