@@ -633,7 +633,7 @@ margin: 4rem;
     color: white;
     margin: 1rem 0;
 }
-form{
+/* form{
     display: flex;
     flex-direction: column;
 }
@@ -663,7 +663,7 @@ form input::placeholder, textarea::placeholder{
 }
 form button{
     margin: 0.5rem 0;
-}
+} */
 
 .toTop{
     display: flex;
