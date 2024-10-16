@@ -694,7 +694,7 @@ form button{
 }
 #footer .footer-img{
     width: 19.5vw;
-    /* background: url("/media/forevercare-logo.png"); */
+    background: url("/public/media/forevercare-logo.png");
     /* background-color: #327f92; */
     background-position: center;
     background-size: cover;
