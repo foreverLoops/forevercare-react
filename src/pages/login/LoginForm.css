@@ -1,0 +1,125 @@
+.body{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color:#327f92;
+      font-family: Arial, Helvetica, sans-serif;
+      height: 100vh;
+}
+
+.main-div{
+  display: flex;
+  /* border-radius: 5px; */
+  border: 4px solid black;
+  border-image:linear-gradient( to top, hsla(184, 55%, 88%, 0.486), rgba(18, 202, 202, 0.493) )1; 
+  box-shadow: 0 10px 20px rgba(2, 2, 2, 0.521);
+
+}
+.main-logo{
+  padding: 12px;
+  width: 30vw;
+  height: 75vh;
+  background: linear-gradient(to top, #BBE6E4, #BBE6E4);
+  border-image: linear-gradient(to top, hsla(190, 72%, 41%, 0.486), rgba(140, 228, 240, 0.493)) 2;
+}
+
+.main_logo{
+  padding: 12px;
+  width: 35vw;
+  height: 75vh;
+  background-image: url(/public/media/forevercare-logowhite.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-image: linear-gradient( to top, hsla(190, 72%, 41%, 0.486), rgba(140, 228, 240, 0.493) )2;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.h1{
+  margin-top: 30px;
+  text-align: center;
+}
+
+.labels{
+  text-align:center;
+}
+/*do not forget to change it to tpye number*/
+.inputs[type="email"],[type="password"],[type="text]"] {
+  padding: 10px 10px;
+  margin: 5px 0;
+  display: flex;
+  border: 2px solid #1f7f9177;
+  border-radius: 4px;
+}
+.inputs:focus{
+  outline: none;
+}
+.ForgotPassword a{
+  text-decoration: none;
+  font-size: 18px;
+  color: #505886da;
+}
+.ForgotPassword{
+  font-size: 16px;
+  margin-top: -5px;
+}
+
+.terms{
+  text-align: center;
+}
+
+.Checkbox[type="checkbox"]{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.SignIn{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  border: 3px solid #1f7f9177;
+  border-radius: 5px;
+  margin: auto;
+  
+}
+
+.SignIn:hover{
+  cursor: pointer;
+}
+
+.SignUp{
+  color: rgba(19, 59, 192, 0.678);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+
+@media screen and (max-width: 836px) {
+  .main-logo {
+    width: 100vw;
+    height: 90vh;
+  }
+
+  #main-logo {
+    display: none;
+  }
+
+  .main-logo {
+    width: 90vw;
+    height: 80vh;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .log_in {
+    margin-top: 0;
+  }
+}
