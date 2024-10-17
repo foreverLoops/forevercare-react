@@ -34,7 +34,7 @@
   border-image: linear-gradient( to top, hsla(190, 72%, 41%, 0.486), rgba(140, 228, 240, 0.493) )2;
 }
 
-.container{
+.login_Contanier{
   display: flex;
   align-items: center;
   justify-content: center;
