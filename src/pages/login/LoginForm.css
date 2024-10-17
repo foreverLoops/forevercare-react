@@ -1,20 +1,17 @@
 /* LoginForm.css */
 
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #327f92;
+/* body {
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
     margin: 0;
-  }
+  } */
   
-  .main-div {
+  /* .main-div {
     display: flex;
     border: 4px solid black;
     border-image: linear-gradient(to top, hsla(184, 55%, 88%, 0.486), rgba(18, 202, 202, 0.493)) 1;
     box-shadow: 0 10px 20px rgba(2, 2, 2, 0.521);
+  
   }
   
   .main-logo {
@@ -73,7 +70,7 @@ body {
     border: 3px solid #1f7f9177;
     border-radius: 5px;
     margin: auto;
-  }
+  } */
   
   /* .responsive-main-logo {
     padding: 12px;
@@ -87,7 +84,7 @@ body {
     /* border-image: linear-gradient(to top, hsla(190, 72%, 41%, 0.486), rgba(140, 228, 240, 0.493)) 2;
   /* } */ 
   
-  @media screen and (max-width: 836px) {
+  /* @media screen and (max-width: 836px) {
     .main-logo {
       width: 100vw;
       height: 90vh;
@@ -106,4 +103,4 @@ body {
       margin-top: 0;
     }
   }
-  
+   */
