@@ -149,7 +149,7 @@
      background-color: #327f92;
      padding:30px 0;
      border-radius: 5px;
-     width: 100vw;
+     /* width: 100vw; */
      
 }
 
@@ -263,7 +263,7 @@ background-color: #f5f7f61e;
    top: 20px;
    /* transform: translateY(-50%); */
    left: 10%;
-   width:78vw;
+    width:78vw;
    
  
    
@@ -365,8 +365,9 @@ background-color: #f5f7f61e;
   
 }
 
-.h3{
-    color: #00bfa5;
+.doctorName{
+    color:#327f92;
+    padding: 10px;
 }
 .heading-center{
     display: flex;
@@ -376,11 +377,11 @@ background-color: #f5f7f61e;
     padding-top: 1.5rem;
     padding-bottom: 2rem;
 }
-body {
+/* body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    margin: 0;
-}
+    margin: 0; */
+/* } */
  
 .grid-container {
     display: grid;
@@ -423,7 +424,7 @@ body {
 
 }
  
-h3 {
+.heading3 {
     margin: 10px 0;
     font-size: 1.2em;
     color: #327f92;

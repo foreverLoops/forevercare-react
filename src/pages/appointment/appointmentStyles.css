@@ -196,11 +196,7 @@
 
 }
 
-.button:hover{
-    
-    box-shadow:0 0 3px 2px #2fc86ca4 ;
 
-}
 .app01{
     justify-content: space-between;
 }
@@ -409,9 +405,7 @@
         margin-left: 15px
     }
     
-    /* table{
-        width: 40vw
-    } */
+    
     
     }
 @media (max-width:375px){
@@ -431,9 +425,7 @@
         flex-direction: column-reverse;
         
     }
-    /* aside{
-        position: static;
-    /* } */
+   
 } 
 @media (max-width: 320px){
     .heading{

@@ -1,19 +1,33 @@
 import React from 'react';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import Slider from 'react-slick';
+
 import "../aboutUs/aboutUs.css"
 
+
 export default function AboutUs() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true, // Enable arrows if needed
   
-  };
+  
+  
+
+  // const aboutNavLinks = [
+  //   { id: 1, label: 'Home', 
+  //     href: '/home' 
+  //   },
+  //   { id: 2, label: 'Our Story', 
+  //     href: '#uniqueStory' 
+  //   },
+  //   { id: 3, label: 'Healthcare Professionals', 
+  //     href: '#doctors' 
+  //   },
+  //   { id: 4, label: 'Development Team', 
+  //     href: '#devTeam' 
+
+  //   },
+  //   // { id: 5, label: 'Appointment', 
+  //   //   button: true 
+
+  //   // },
+  // ];
+
 
   return (
     <div>
@@ -23,20 +37,20 @@ export default function AboutUs() {
           <ul>
             <li><i className="fa-solid fa-phone"></i>021 123 4566</li>
             <li><i className="fa-solid fa-location-dot"></i>Saltriver, Cape Town, South Africa</li>
-            <li><a href="/public/login.html">login</a> | <a href="/public/signup.html">signup</a></li>
+            <li><a href="/LoginForm">login</a> | <a href="/signUp">signup</a></li>
           </ul>
         </nav>
         <nav className="navbar">
           <h4>FOREVERCARE</h4>
           <ul>
-            <li><a href="/index.html">Home</a></li>
+            <li><a href="/home">Home</a></li>
             <li><a href="#uniqueStory">Our Story</a></li>
             <li><a href="#doctors">Healthcare Professionals</a></li>
             <li><a href="#devTeam">Development Team</a></li>
             <li><button className="button-style mobile-button">Appointment</button></li>
           </ul>
           <div className="user-box">
-            <a href="/public/appointment.html"><button className="button-style" id="mobile-button">Appointment</button></a>
+            <a href="/appointment"><button className="button-style" id="mobile-button">Appointment</button></a>
             <a href="portal.html"><i className="fa-solid fa-user"></i></a>
           </div>
           <div className="mobile">
@@ -58,7 +72,7 @@ export default function AboutUs() {
         <section className="aboutUsDetails">
           <div className="aboutUsBackground">
             <div className="aboutUsInfo">
-              <h3>Who are we</h3>
+              <h3 className='heading3'>Who are we</h3>
               <div className="line"></div>
               <p>ForeverCare Hospital is a leading healthcare provider dedicated to offering top-quality medical services with compassion and expertise. Our team of skilled professionals is committed to delivering personalized care in a state-of-the-art facility. At ForeverCare, your health and well-being are our top priorities. We strive to make every patient’s experience positive and supportive, ensuring the best possible outcomes.</p>
             </div>
@@ -73,7 +87,7 @@ export default function AboutUs() {
             <p className="message">A commitment that Lasts a Lifetime, forever Yours.</p>
           </div>
           <div className="story">
-            <p>"Forever Yours" is not just a name; it's our promise. We are dedicated to being there for you and your loved ones through every stage of life, offering not just treatments but a hand to hold, a shoulder to lean on, and a community that understands the importance of both health and hope. Our unique blend of advanced medical expertise and heartfelt care ensures that you are not just treated—you are truly cared for, in every sense of the word. We pride ourselves on fostering relationships that last a lifetime, with a commitment to your well-being that transcends the typical patient-caregiver relationship.</p>
+            <p>"Forever Yours" is not just a name; it's our promise. We are dedicated to being there for you and your loved ones through every stage of life, offering not just treatments but a hand to hold, a shoulder to lean on, and a community that understands the importance of both health and hope. Our unique blend of advanced medical expertise and heartfelt care ensures that you are not just treated, you are truly cared for, in every sense of the word. We pride ourselves on fostering relationships that last a lifetime, with a commitment to your well-being that transcends the typical patient-caregiver relationship.</p>
           </div>
         </section>
 
@@ -124,16 +138,16 @@ export default function AboutUs() {
         <section className="our-doctors">
           <h2 className="heading-center">Our Healthcare Professionals</h2>
           <div id="doctors" className="grid-container">
-            <div className="card"><img src="/media/doctor1.jpg" alt="Doll Jolly" className="doctor-img" /><h3>Smith Patel</h3><p className="occupation">GYNECOLOGIST</p></div>
-            <div className="card"><img src="/media/doctor2.png" alt="Martine Adam" className="doctor-img" /><h3>Martine Adam</h3><p className="occupation">NEUROLOGIST</p></div>
-            <div className="card"><img src="/media/doctor3.jpg" alt="Lucika Lorem" className="doctor-img" /><h3>Lucika Jane</h3><p className="occupation">CARDIOLOGIST</p></div>
-            <div className="card"><img src="/media/doctor4.jpg" alt="Piter Parker" className="doctor-img" /><h3>Piter Parker</h3><p className="occupation">PSYCHOLOGIST</p></div>
-            <div className="card"><img src="/media/doctor6.png" alt="Jonathan Doe" className="doctor-img" /><h3>Jonathan Doe</h3><p className="occupation">PEDIATRICIAN</p></div>
+            <div className="card"><img src="/media/doctor1.jpg" alt="Doll Jolly" className="doctor-img" /><h3 className='doctorName'>Smith Patel</h3><p className="occupation">GYNECOLOGIST</p></div>
+            <div className="card"><img src="/media/doctor2.png" alt="Martine Adam" className="doctor-img" /><h3 className='doctorName'>Martine Adam</h3><p className="occupation">NEUROLOGIST</p></div>
+            <div className="card"><img src="/media/doctor3.jpg" alt="Lucika Lorem" className="doctor-img" /><h3 className='doctorName'>Lucika Jane</h3><p className="occupation">CARDIOLOGIST</p></div>
+            <div className="card"><img src="/media/doctor4.jpg" alt="Piter Parker" className="doctor-img" /><h3 className='doctorName'>Piter Parker</h3><p className="occupation">PSYCHOLOGIST</p></div>
+            <div className="card"><img src="/media/doctor6.png" alt="Jonathan Doe" className="doctor-img" /><h3 className='doctorName'>Jonathan Doe</h3><p className="occupation">PEDIATRICIAN</p></div>
           </div>
         </section>
 
         {/* Development Team Section */}
-        <section className="team-section">
+        <section id="devTeam"className="team-section">
           <h1 className="heading-center">Development Team</h1>
           <div className="team-container">
             <div className="team-member">
