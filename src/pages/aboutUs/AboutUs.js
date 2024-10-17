@@ -1,6 +1,20 @@
 import React from 'react';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider from 'react-slick';
+import "../aboutUs/aboutUs.css"
 
 export default function AboutUs() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true, // Enable arrows if needed
+  
+  };
+
   return (
     <div>
       {/* Header */}
@@ -63,6 +77,7 @@ export default function AboutUs() {
           </div>
         </section>
 
+
         {/* Carousel Section */}
         <section className="carousel">
           <div className="card-wrapper container">
@@ -102,6 +117,8 @@ export default function AboutUs() {
             <i id="right" className="fa-solid fa-circle-arrow-right"></i>
           </div>
         </section>
+        
+        
 
         {/* Our Doctors Section */}
         <section className="our-doctors">
@@ -140,7 +157,7 @@ export default function AboutUs() {
             <div className="team-member">
               <img src="/media/petersen.jpg" alt="Profile Picture" className="avatar" />
               <p className="name">Shabbeer Petersen</p>
-              <p className="quote">"Everything you've done up until now has not gone to waste."</p>
+              <p className="quote">"Everything you've done up until<br/>now has not gone to waste."</p>
               <div className="social-icons">
                 <a href="#"><i className="fa-brands fa-github"></i></a>
                 <a href="#"><i className="fa-brands fa-linkedin"></i></a>
@@ -149,7 +166,7 @@ export default function AboutUs() {
             <div className="team-member">
               <img src="/media/yusri.jpg" alt="Profile Picture" className="avatar" />
               <p className="name">Yusri Nelson</p>
-              <p className="quote">"Futures don't make themselves, you create them."</p>
+              <p className="quote">"Futures don't make themselves,<br/> you create them."</p>
               <div className="social-icons">
                 <a href="#"><i className="fa-brands fa-github"></i></a>
                 <a href="#"><i className="fa-brands fa-linkedin"></i></a>
@@ -168,7 +185,7 @@ export default function AboutUs() {
         </section>
 
         {/* Footer */}
-        <footer>
+        {/* <footer>
           <div className="footer-list-box">
             <ul className="footer-socials">
               <li><i className="fa-brands fa-linkedin"></i></li>
@@ -199,8 +216,8 @@ export default function AboutUs() {
               </dl>
             </div>
             <p className="footer-text">© 2024 ForeverCare. All rights reserved.</p>
-          </div>
-        </footer>
+          </div> */}
+        {/* </footer> */}
       </main>
     </div>
   );
