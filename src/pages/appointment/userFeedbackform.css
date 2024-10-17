@@ -10,21 +10,24 @@ body.active-modal {
 }
 
 .modal, .overlay {
-    width: 100vw;
+    width: 97vw;
     height: 100vh;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    position: fixed;
+    position: static;
 }
+.modal{
+    height: 100vh;
+    margin: 20px;
+    
+}
+    
 
-.overlay {
-    background: rgba(49,49,49,0.8);
-}
 .modal-content {
     position: absolute;
-    top: 50%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     line-height: 1.4;
@@ -33,19 +36,58 @@ body.active-modal {
     border-radius: 3px;
     max-width: 700px;
     min-width: 500px;
+    border-radius: 10px;
+    background-image:url(../../../public/backgroundFeedbackForm.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover ;
 }
+
+
 
 .heading-form{
     font-size:1.7em ;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .form-info{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+    display: block;
+    padding: 10px;
     margin: 20px;
 }
 .form-label{
     font-size: 20px ;
+    color: #327f92 ;
+}
+
+.experience{
+    display: flex ;
+    flex-direction: column;
+    padding: 10px;
+   
+}
+
+.input-labels{
+    padding: 5px;
+    margin: 5px;
+    font-size: 1.1rem;
+}
+
+.textarea-container{
+    resize: none;
+    width: 20vw;
+    color: black;
+    font-size: 1.4em;
+}
+
+.patientInfo,.patientLast{
+    margin-bottom: 20px;
+}
+
+.user-input{
+    height: 3vh;
+    border-radius: 10px;
+    margin-left: 10px;
+    text-align: center;
+
 }

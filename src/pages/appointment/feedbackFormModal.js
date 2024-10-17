@@ -23,52 +23,48 @@ export default function Modal(){
             <div className="modal-content">
             
                 
-                <form >
-                    <h1 className="heading-form">User Feedback Form</h1>
+                <form className="form-container" >
+                    <h1 className="heading-form">Feedback Form</h1>
                     <section className="form-info">
                         <div className="patientInfo">
-                            <label className="form-label" htmlFor="name">First Name:</label> <input id="firstName" type="text"/>
+                            <label className="form-label" htmlFor="name">First Name:</label> <input className="user-input" id="firstName" type="text"/>
                         </div>
                         <div className="patientLast">
-                            <span className="labelInfo"><label className="form-label" htmlFor="lastName" />Last Name:</span> <input id="lastName" type="text"/><label/>
+                           <label className="form-label" htmlFor="lastName">Last Name:</label> <input className="user-input" id="lastName" type="text"/>
                         </div>
-                    </section>
+                        
+                    </section> 
     
-                    <section >
-                        <div className="userEmail">
-                            <label className="form-label" htmlFor="email">Email:</label>
-                            <input id="email" type="email"/>
-                        </div>
-                    </section>
+    
     
                     <section>
                         <h3>1.How was your experience using the Website ?</h3>
                         <div className="experience">
-                            <label><input name="exp" type="radio"/> Not Satisfied</label>
-                            <label><input name="exp" type="radio"/> Satisfied</label>
-                            <label><input name="exp" type="radio"/> Satisfied enough to tell others</label>
+                            <label className="input-labels"><input name="exp" type="radio"/> Not Satisfied</label>
+                            <label className="input-labels"><input name="exp" type="radio"/> Satisfied</label>
+                            <label className="input-labels"><input name="exp" type="radio"/> Satisfied enough to tell others</label>
                         </div>
     
                         <h3>2.Was the Website easy to navigate ?</h3>
                         <div className="experience">
-                            <label><input name="easy" type="radio"/> Yes</label>
-                            <label><input name="easy" type="radio"/> No</label>
+                            <label className="input-labels"><input name="easy" type="radio"/> Yes</label>
+                            <label className="input-labels"><input name="easy" type="radio"/> No</label>
                         </div>
                         <h3>3.Did you experience any technical difficulties ?</h3>
                         <div className="experience">
-                            <label><input name="technical" type="radio"/> Yes</label>
-                            <label><input name="technical" type="radio"/> No</label>
+                            <label className="input-labels"><input name="technical" type="radio"/> Yes</label>
+                            <label className="input-labels"><input name="technical" type="radio"/> No</label>
                         </div>
                         <h3>4.Would you recommend the website to others ?</h3>
                         <div className="experience">
-                            <label><input name="recommend" type="radio"/> Yes</label>
-                            <label><input name="recommend" type="radio"/> No</label>
+                            <label className="input-labels"><input name="recommend" type="radio"/> Yes</label>
+                            <label className="input-labels"><input name="recommend" type="radio"/> No</label>
                         </div>
                     </section>
                     <section>
                         <h3>5.Please leave any Feedback:</h3>
                         <div>
-                            <textarea rows="3" cols="0"  ></textarea>
+                            <textarea className="textarea-container" rows="5" cols="0"  ></textarea>
                         </div>
                     </section>
                     <div className="submitButtonContainer">
