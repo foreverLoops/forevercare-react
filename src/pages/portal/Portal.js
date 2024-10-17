@@ -1,7 +1,7 @@
 import { clinicalSummary, documents, medications, notice, timeline } from "/scripts/portalData.js";
 
 let rightSidebar = document.querySelector(".sidebar");
-let rightSidebarLinks = rightSidebar.querySelectorAll("li");
+let rightSidebarLinks = rightSidebar.querySelectorAll("sideLink");
 let display = document.querySelector(".display");
 
 display.innerHTML = notice;
