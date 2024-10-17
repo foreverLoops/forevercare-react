@@ -24,7 +24,7 @@ export default function Modal(){
             
                 
                 <form >
-                    <h1 className="heading-form">User Feedback Form</h1>
+                    <h1 className="heading-form">Feedback Form</h1>
                     <section className="form-info">
                         <div className="patientInfo">
                             <label className="form-label" htmlFor="name">First Name:</label> <input id="firstName" type="text"/>
@@ -32,14 +32,10 @@ export default function Modal(){
                         <div className="patientLast">
                             <span className="labelInfo"><label className="form-label" htmlFor="lastName" />Last Name:</span> <input id="lastName" type="text"/><label/>
                         </div>
-                    </section>
+                        
+                    </section> 
     
-                    <section >
-                        <div className="userEmail">
-                            <label className="form-label" htmlFor="email">Email:</label>
-                            <input id="email" type="email"/>
-                        </div>
-                    </section>
+    
     
                     <section>
                         <h3>1.How was your experience using the Website ?</h3>
