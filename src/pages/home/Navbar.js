@@ -37,7 +37,7 @@ export default function Navbar() {
                 <li><i className="fa-solid fa-location-dot"></i>
                     <p>Saltriver, Cape Town, South Africa</p>
                 </li>
-                <li><Link to="/loginForm">login</Link>|<Link to="/signupForm">signup</Link> </li>
+                <li><Link to="/">login</Link>|<Link to="/SignupForm">signup</Link> </li>
             </ul>
         </nav>
         <nav className="navbar">
