@@ -1,13 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './PortalPage.css'
 export default function PortalPage() {
   return (
     
 
-    <div id="container-portal" >
-      <nav class="navbar-container">
-      <ul class="navbar">
+    <div style={{
+      margin: 0,
+      padding: 0,
+      boxSizing: 'border-box',
+      backgroundColor: '#f4f4f4',
+      display: 'grid',
+      }} id="container-portal" >
+      <nav style={{
+        backgroundColor: '#327f92',
+        padding: '10px',
+        color: 'white',
+        display: 'flex',
+        justifyContent: 'center',}} class="navbar-container">
+      <ul style={{
+        listStyleType: 'none',
+        padding: 0,
+        margin: 0,
+        display: 'flex',
+        justifyContent: 'center',}} class="navbar">
         <Link className="navLink">Online Pharmacy</Link>
         <Link className="navLink">Send Message</Link>
         <Link className="navLink">Request Appointment</Link>
@@ -23,7 +38,7 @@ export default function PortalPage() {
       </label>
 
       <nav class="sidebar-container">
-        <ul class="sidebar">
+        <div class="sidebar">
           <Link className="sideLink">Appointments</Link>
           <Link className="sideLink">Clinical Summary</Link>
           <Link className="sideLink">Documents</Link>
@@ -33,7 +48,7 @@ export default function PortalPage() {
           <Link className="sideLink">Timeline</Link>
           <Link className="sideLink">Visits</Link>
           <Link className="sideLink">Wellness</Link>
-        </ul>
+        </div>
       </nav>
 
       <aside class="content">
