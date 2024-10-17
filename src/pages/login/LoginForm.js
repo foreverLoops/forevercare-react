@@ -7,7 +7,7 @@ const LoginForm = () => {
     <div className='body'>
     <div className='main-div '>
       <div className='main-logo'>
-        <form className='container' action="" method='post'>
+        <form className='login_Contanier' action="" method='post'>
           <div>
             <h1 className='h1'>Welcome</h1>
           </div>

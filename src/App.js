@@ -7,6 +7,7 @@ import PortalPage from './pages/portal/PortalPage';
 import LoginForm from './pages/login/LoginForm';
 import SignUpForm from './pages/signup/SignUpForm';
 import Home from "./pages/home/Home"
+import Modal from './pages/appointment/feedbackFormModal';
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
       <Route path='/portal' element={<PortalPage/>}/>
       <Route path='/' element={<LoginForm/>}/>
       <Route path='/SignUpForm' element={<SignUpForm/>}/>
+      <Route path='/modal' element={<Modal/>}/>
+
     </Routes>
   </BrowserRouter>
   );

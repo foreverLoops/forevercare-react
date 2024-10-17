@@ -1,7 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-}
+
 .backgroundImage{
     margin: 0%;
     padding: 0%;
@@ -150,7 +147,7 @@
     text-align: center;
     resize: none;
     font-size:1em;
-    height: 30px;
+    height: 70px;
     background-color:#bbe6e438 ;  
     border-radius: 10px;
     border: none;
@@ -163,63 +160,21 @@
     padding-top: 15px;
     width: 20vw;
     
-
 }
 
 
+.time{
+    padding: 10px;
+    margin: 5px;
+    font-size: 20px;
 
-/* 
-
-.month{
-    background-color: #6cdad4;
-    padding-top:25px ;
-    padding-bottom:25px ;
 }
 
-
-table{
-    background-color: rgba(255, 255, 255, 0.2);
-    margin-left: 20px;
-    width:50vw;
-    margin:20px  ;
-    padding: 20px;
+.app-time{
+    padding: 10px;
+   
 }
 
-td{
-    background-color:rgba(245, 245, 245, 0.644);
-    box-shadow: 0px 0px 5px 2px rgb(255, 255, 255);
-    color:black;
-    padding:15px 10px;
-    text-align: center;
-}
-.pass{
-    color: rgb(110, 110, 110);
-}
-
-td:nth-child(7n) {
-    color: #ff685d;
-  }
-td:hover{
-    background-color: #ffffff34;
-    cursor: pointer;
-}
-
-
-.date{
-    display: flex;
-    flex-direction: row;
-}
-
- */
-
-input[type="time"]{
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    border-radius: 5px;
-    width:80px;
-    font-size: 1rem;
-}
 
 .submit_button{
     display: flex;
