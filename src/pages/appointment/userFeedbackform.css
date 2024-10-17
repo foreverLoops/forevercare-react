@@ -21,12 +21,13 @@ body.active-modal {
 .modal{
     height: 100vh;
     margin: 20px;
+    
 }
     
 
 .modal-content {
     position: absolute;
-    top: 50%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     line-height: 1.4;
@@ -35,7 +36,13 @@ body.active-modal {
     border-radius: 3px;
     max-width: 700px;
     min-width: 500px;
+    border-radius: 10px;
+    background-image:url(../../../public/backgroundFeedbackForm.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover ;
 }
+
+
 
 .heading-form{
     font-size:1.7em ;
@@ -60,13 +67,27 @@ body.active-modal {
    
 }
 
-.radio-labels{
-    font-size: 15px;
+.input-labels{
+    padding: 5px;
+    margin: 5px;
+    font-size: 1.1rem;
 }
 
-.input-fields{
-    padding: 20px;
-    margin: 15px;
+.textarea-container{
+    resize: none;
+    width: 20vw;
+    color: black;
+    font-size: 1.4em;
 }
 
+.patientInfo,.patientLast{
+    margin-bottom: 20px;
+}
 
+.user-input{
+    height: 3vh;
+    border-radius: 10px;
+    margin-left: 10px;
+    text-align: center;
+
+}
