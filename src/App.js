@@ -17,11 +17,8 @@ function App() {
       <Route path='/appointment' element={<Appointment/>}/>
       <Route path='/portal' element={<PortalPage/>}/>
       <Route path='/home' element={<Home />}/>
-      <Route path='/AboutUs' element={<AboutUs/>}/>
       <Route path='/LoginForm' element={<LoginForm/>}/>
       <Route path='/SignUpForm' element={<SignUpForm/>}/>
-      <Route path='/Appointment' element={<Appointment/>}/>
-      <Route path='/PortalPage' element={<PortalPage/>}/>
     </Routes>
   </BrowserRouter>
   );
