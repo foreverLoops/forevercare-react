@@ -103,7 +103,7 @@
    text-align: center;
  } 
 .aboutUsContent {
-    /* background: url(/media/Backgroundimage.png); */
+    background: url(../../../public/media/backgroundImage.png);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -132,7 +132,7 @@
 
 .aboutUsDetails{
     display: flex;
-    /* background-image: url("/media/book.jpg"); */
+    background-image: url(../../../public/media/book.jpg);
     background-position: right;
     align-items: center;
     background-repeat: no-repeat;
@@ -240,9 +240,9 @@ background-color: #f5f7f61e;
     background:#FFF;
     border-top:2px solid #FFF ;
     border-bottom:2px solid #FFF ;
-    
+   
 }
-
+ 
 .card-list{
     max-width: 1250px;
     position: relative;
@@ -252,11 +252,11 @@ background-color: #f5f7f61e;
     white-space: wrap;
     scroll-behavior: smooth;
     overflow: hidden;
-    
-    
-
-    
-    
+   
+   
+ 
+   
+   
 }
 .container{
    position: relative;
@@ -265,11 +265,11 @@ background-color: #f5f7f61e;
    left: 10%;
    width:78vw;
    
-  
+ 
    
 }
-
-
+ 
+ 
 .container i{
     top: 50%;
     /* background: white; */
@@ -282,7 +282,7 @@ background-color: #f5f7f61e;
     font-size:1.2rem ;
     position: absolute;
     transform: translateY(-50%);
-    
+   
 }
 .container i:first-child{
     left: -5%;
@@ -291,18 +291,18 @@ background-color: #f5f7f61e;
 .container i:last-child{
     right: -5%;
     top: 50%;
-
+ 
 }
-
+ 
 .box1 , .box2{
     margin-top: 5%;
-    
+   
 }
 .box1{
     margin-top: 150px;
 }
-
-
+ 
+ 
 .card-list .card-item .card-link{
     width: 400px;
     display: block;
@@ -313,19 +313,19 @@ background-color: #f5f7f61e;
     border: 2px solid transparent;
     box-shadow: 0px 10px 10px  #00000005;
     transition: 0.2 ease;
-    
-    
+   
+   
 }
  .card-item{
     list-style: none;
     margin-left:15px ;
 }
-
+ 
 .card-list .card-item .card-link:hover {
     border-color:#5372f0
 }
-
-
+ 
+ 
 .card-list .card-link .badge{
     color: #070707;
     font-size:1.3rem;
@@ -336,10 +336,10 @@ background-color: #f5f7f61e;
     width: fit-content;
     border-radius: 20px;
    
-
+ 
 }
-
-
+ 
+ 
 .card-list .card-link .card-title{
     font-size: 1.19rem;
     color: #fffefe;
@@ -350,9 +350,9 @@ background-color: #f5f7f61e;
     width:350px  ;
     text-align: center;
     padding: 10px;
-
+ 
 }
-
+ 
 
 /* Our Doctors Section */
 .our-doctors {
@@ -524,74 +524,7 @@ h3 {
 }
 
  
-/* FOOTER */
-footer{
-    background-color: #327f92;
-    display: flex;
-    flex-direction: row-reverse;
-    color: white;
-    justify-content: space-evenly;
-}
-    
-footer .footer-img{
-    width: 19.5vw;
-    /* background: url("../media/forevercare-logo.png"); */
-   
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-}
 
-.footer-socials{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
-    list-style: none;
-}
-.footer-socials li{
-    margin-right: 1rem;
-    font-size: 1.5rem;
-}
-footer .footer_list-box{
-    width: 70vw;
-    background-color: #327f92;
-   
-   
-    padding: 1rem 5rem;
-}
-.footer_list-box h5{
-    text-align: center;
-    font-size: 1rem;
-}
-.footer_list-box i{
-    margin-right: 0.5rem;
-}
-.footer_list{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-}
-.footer_list dt{
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-.footer_list dl{
-    list-style: none;
-    line-height: 1.4rem;
-}
-.footer-text {
-    border-top: 1px solid white;
-    padding-top: 10px;
-    font-size: 0.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 
 @media (max-width:1024px) {

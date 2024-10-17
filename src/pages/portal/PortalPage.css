@@ -249,7 +249,7 @@
   
   footer .footer-img{
     width: 30%;
-    background: url("/src/media/hero.jpg");
+    /* background: url("/src/media/hero.jpg"); */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
