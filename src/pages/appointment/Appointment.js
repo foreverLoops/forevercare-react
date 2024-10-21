@@ -2,6 +2,14 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import "./appointmentStyles.css";
+import Modal from "./feedbackFormModal"
+
+import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
+import "./appointmentStyles.css";
+import { db } from './firebase'; // Import your Firebase configuration
+import { collection, addDoc } from "firebase/firestore"; // Import Firestore functions
 
 export default function Appointment() {
   const [startDate, setStartDate] = useState(new Date());
@@ -23,44 +31,33 @@ export default function Appointment() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const appointmentDetails = { ...formData, time: startDate };
-    console.log('Submitting appointment:', appointmentDetails); // Add this line
-  
-    // Fetch request...
-  
-  
-    try {
-      const response = await fetch('http://127.0.0.1:5000/api/appointments', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(appointmentDetails),
-      });
 
-      if (response.ok) {
-        alert('Appointment scheduled successfully');
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          ID: '',
-          contact: '',
-          appointment: '',
-          other: '',
-        });
-        setStartDate(new Date());
-      } else {
-        alert('Error scheduling appointment');
-      }
+    try {
+      // Add a new appointment to Firestore
+      await addDoc(collection(db, "appointments"), appointmentDetails);
+      alert('Appointment scheduled successfully');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        ID: '',
+        contact: '',
+        appointment: '',
+        other: '',
+      });
+      setStartDate(new Date());
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Error adding document: ', error);
       alert('Error scheduling appointment');
     }
   };
 
   return (
+   
     <>
-      <div className="backgroundImage">
+    <body className="backgroundImage">
+      <div >
+
         <div>
           <h1 className='title'>Appointment Form</h1>
         </div>
@@ -158,8 +155,12 @@ export default function Appointment() {
               </div>
             </section>
           </form>
+          <div className='modal-container'><Modal/></div>
+
         </div>
+        
       </div>
+      </body>
     </>
   );
 }
