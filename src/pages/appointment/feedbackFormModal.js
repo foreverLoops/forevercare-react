@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import "./userFeedbackform.css";
+import { FaWpforms } from "react-icons/fa";
 
 
 export default function Modal(){
@@ -12,11 +13,10 @@ export default function Modal(){
 
     return(
         <>
-        <button onClick ={toggleModal}
-            className = "btn-modal">
-                Open
-        </button>
-
+        <FaWpforms  onClick ={toggleModal}
+            className = "btn-modal"
+            />
+       
         {modal && (
             <div className="modal">
             <div onClick ={toggleModal} className="overlay"></div>

@@ -1,6 +1,5 @@
-/* SignUpForm.css
+/* SignUpForm.css*/
 
-<<<<<<< HEAD
 .Main_SignUp{
   display: flex;
   align-items: center;
@@ -12,7 +11,10 @@
 .Body_SignUp {
   padding: 0 12px;
   width: 50vw;
-  height: 300vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #BBE6E4;
 }
 
 
@@ -21,8 +23,6 @@
 .Header {
   display: flex;
   justify-content: center;
-  background-position: center;
-  background-repeat: no-repeat;
   padding: 20px;
   font-weight: bold;
   margin: 0 20px;
@@ -62,14 +62,24 @@
   justify-content: center;
 }
 
+
 .Dateregistration input[type="date"] {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20vw;
+  padding: 12px;
   height: 70%;
-  padding: 12px 12px;
   margin: 8px 0;
   border: 2px solid rgba(58, 161, 192, 0.829);
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+.Dateregistration{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .Date{
@@ -84,6 +94,10 @@
  
 } */
 
+/* .Patient_Details_Form label {
+  font-size: large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} */
 .Patient_Details_Form input[type="text"],
 .Patient_Details_Form input[type="number"],
 .Patient_Details_Form input[type="tel"],
@@ -107,9 +121,36 @@ textarea {
   font-size: 15px;
 }
 
+#yes:checked ~ .Guardian{
+  display: flex; /* Display the guardian details form when "Yes" is checked */
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  margin: 8px 3px;
+  width: 50vw;
+}
+
+.Guardian {
+  display: none; /* Hide the form by default */
+}
+
+
 /* Emergency Contact Section */
 .Emergency_Contact {
   text-align: center;
+}
+
+.Text{
+  font-size: large;
+  height: 200px;
+  color: #000000cb;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: 2px solid rgb(52, 153, 160);
+  border-radius: 4px;
+  padding: 12px;
+  margin: 8px 3px;
+  box-sizing: border-box;
+
 }
 
 /* Address Section */
@@ -125,27 +166,36 @@ textarea {
   border-radius: 4px;
 }
 
-/* Submit Button Section */
-.submit_button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
+
+/* Submit Button Section */ 
+
+/* Style for the Submit Button */
+.SignUp {
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    padding: 12px 24px; /* Padding for the button */
+    border: none; /* Remove the border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects */
+    margin-top: 15px; /* Space above the button */
+    align-self: center; /* Align the button to the center */
 }
 
-.submit_button input {
-  padding: 10px;
-  border-radius: 5px;
-  border: 2px solid rgb(52, 153, 160);
-  font-size: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 19vw;
+/* Hover effect for the Submit Button */
+.SignUp:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly increase the button size on hover */
 }
 
-.submit_button input:hover {
-  background-color: #47864a34;
+/* Active state for the Submit Button */
+.SignUp:active {
+    background-color: #47a5a5ab; /* Even darker green when clicked */
+    transform: scale(0.98); /* Slightly shrink the button when clicked */
 }
+
+
 
 input::placeholder {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -165,88 +215,3 @@ input:focus {
 .Radio {
   margin: 8px 12px;
 }
-=======
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-  }
-  
-  main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #e8ecf3;
-    flex-direction: column;
-  }
-  
-  h1 {
-    text-align: center;
-    color: #333;
-  }
-  
-  form {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 700px;
-  }
-  
-  form h2 {
-    color: #444;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
-  }
-  
-  label {
-    display: block;
-    margin: 15px 0 5px;
-    font-weight: bold;
-  }
-  
-  input[type="text"],
-  input[type="number"],
-  input[type="tel"],
-  input[type="email"],
-  input[type="password"],
-  input[type="date"],
-  select {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    transition: border-color 0.3s ease-in-out;
-  }
-  
-  input:focus,
-  select:focus {
-    border-color: #007bff;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  }
-  
-  button[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-top: 20px;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-   */
->>>>>>> 28896715b1d86ca8d584e2583282f9753cb9f37b

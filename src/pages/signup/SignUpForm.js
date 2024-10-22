@@ -21,9 +21,11 @@ const SignUpForm = () => {
               <label className="Date" htmlFor="date"></label>
               <input className="Date" type="date" id="date" name="date" required />
             </div>
+            <hr />
 
             <h2 className="Patient_Details">Patient Details</h2>
             <div className="Patient_Details_Form">
+             
               <label className="Patient_" htmlFor="name"></label>
               <input className="Patient_" type="text" name="name" id="name" placeholder="First Name" required />
 
@@ -82,7 +84,6 @@ const SignUpForm = () => {
                 title="Password must be up to 7 characters, and include at least one letter, one number, and one special character."
                 required
               />
-
               <label htmlFor="password2"></label>
               <input type="password" id="password2" name="confirm_password" placeholder="Confirm Password" required />
 
@@ -119,11 +120,65 @@ const SignUpForm = () => {
               <input className='Radio' type="radio" id="no" name="under18" value="no" />
               <label className='No' htmlFor="no">No</label>
 
-              <h2 className='Emergency_Contact'>Emergency Contact</h2>
-              <label htmlFor="emergencyName"></label>
-              <input type="text" id="emergencyName" name="emergencyName" placeholder="Emergency Contact Name" required />
+                <div className="Guardian">
+                <label htmlFor="GuardianName"></label>
+                <input type="text" id="GuardianName" name="GuardianName" placeholder="Guardian Name" required />
+                
+                <label htmlFor="GuardianlastName"></label>
+                <input type="text" id="GuardianlastName" name="GuardianlastName" placeholder="Guardian Last Name" required />
+                </div>
+                
+                <div className="Guardian">
+                <label htmlFor="GuardianEmail"></label>
+                <input type="text" id="GuardianEmail" name="GuardianEmail" placeholder="Guardian Email" required />
 
-              <button className='Submit_SignUp' type="submit">Submit</button>
+                <label htmlFor="GuardianPhone"></label>
+                <input type="text" id="GuardianPhone" name="GuardianPhone" placeholder="Guardian Phone Number" required />
+                </div>
+
+                <div className="Guardian">
+                <label htmlFor="GuardianAltanativeNumber"></label>
+                <input type="text" id="GuardianAltanativeNumber" name="GuardianAltanativeNumber" placeholder="GuardianAltanativeNumber" required />
+
+                <label htmlFor="GuardianRelationship"></label>
+                <input type="text" id="GuardianRelationship" name="GuardianRelationship" placeholder="Guardian Relationship" required />
+                </div>
+
+
+              <h3 className="Header_3">Health History</h3>
+              <textarea className='Text' id="text" name="text" placeholder="Write something.." required></textarea>
+
+              <h3 className="Patient_Details">Medical History</h3>
+
+              <h3 className="Header_3">Taking any Medications currently</h3>
+              <input type="radio" id="yes" name="medications" value="yes" />
+              <label htmlFor="yes">Yes</label>
+              <input type="radio" id="no" name="medications" value="no" />
+              <label htmlFor="no">No</label>
+              <hr />
+
+              <h2 className="Header_3">Insurance Information</h2>
+              <label htmlFor="insurance"></label>
+              <input type="text" id="insurance" name="insurance" placeholder="Insurance Company" required />
+              <label htmlFor="id_Insurance"></label>
+              <input type="text" id="insuranceID" name="insuranceID" placeholder="Insurance ID" />
+
+              <h4 className="Header_3">Policy Holder's Details</h4>
+
+              <label htmlFor="firstname"></label>
+              <input type="text" id="firstname" name="firstname" placeholder="First Name" required />
+
+              <label htmlFor="lastname"></label>
+              <input type='text' id="lastname" name="lastname" placeholder="Last Name" required />
+
+              <label htmlFor="email"></label>
+              <input type="text" id="email" name="email" placeholder="Email" required />
+
+              <label htmlFor="phone"></label>
+              <input type="text" id="phone" name="phone" placeholder="Phone Number" required />
+
+
+              <button className="SignUp" type="submit">Submit</button>
             </div>
           </form>
         </div>
