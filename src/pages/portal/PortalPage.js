@@ -1,58 +1,43 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import './PortalPage.css'
+
 export default function PortalPage() {
   return (
     
 
-    <div style={{
-      margin: 0,
-      padding: 0,
-      boxSizing: 'border-box',
-      backgroundColor: '#f4f4f4',
-      display: 'grid',
-      }} id="container-portal" >
-      <nav style={{
-        backgroundColor: '#327f92',
-        padding: '10px',
-        color: 'white',
-        display: 'flex',
-        justifyContent: 'center',}} class="navbar-container">
-      <ul style={{
-        listStyleType: 'none',
-        padding: 0,
-        margin: 0,
-        display: 'flex',
-        justifyContent: 'center',}} class="navbar">
-        <Link className="navLink">Online Pharmacy</Link>
-        <Link className="navLink">Send Message</Link>
-        <Link className="navLink">Request Appointment</Link>
+    <div id="container-portal" >
+      <nav className="navbar-container">
+      <ul className="navbar">
+        <li className="navLink">Online Pharmacy</li>
+        <li className="navLink">Send Message</li>
+        <li className="navLink">Request Appointment</li>
       </ul>
     </nav>
-    <section class="container">
-      
+    <section className="container-portal">
+
       <input type="checkbox" id="menu-toggle"/>
-      <label for="menu-toggle" class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+      <label for="menu-toggle" className="hamburger">
+          <span className='burger-strip'></span>
+          <span className='burger-strip'></span>
+          <span className='burger-strip'></span>
       </label>
 
-      <nav class="sidebar-container">
-        <div class="sidebar">
-          <Link className="sideLink">Appointments</Link>
-          <Link className="sideLink">Clinical Summary</Link>
-          <Link className="sideLink">Documents</Link>
-          <Link className="sideLink">library</Link>
-          <Link className="sideLink">Medications</Link>
-          <Link className="sideLink">Messages</Link>
-          <Link className="sideLink">Timeline</Link>
-          <Link className="sideLink">Visits</Link>
-          <Link className="sideLink">Wellness</Link>
+      <nav className="sidebar-container">
+        <div className="sidebar-inner-container">
+          <a href='http' className="sideLink">Appointments</a>
+          <a href='http' className="sideLink">Clinical Summary</a>
+          <a href='http' className="sideLink">Documents</a>
+          <a href='http' className="sideLink">library</a>
+          <a href='http' className="sideLink">Medications</a>
+          <a href='http' className="sideLink">Messages</a>
+          <a href='http' className="sideLink">Timeline</a>
+          <a href='http' className="sideLink">Visits</a>
+          <a href='http' className="sideLink">Wellness</a>
         </div>
       </nav>
 
-      <aside class="content">
-        <div class="display">
+      <aside side className="content-data">
+        <div className="display-data">
 
         </div>
       </aside>
