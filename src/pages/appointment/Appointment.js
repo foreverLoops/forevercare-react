@@ -3,6 +3,8 @@ import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import "./appointmentStyles.css";
 import Modal from "./feedbackFormModal"
+import { supabase } from './supabaseClient.js'
+
 
 export default function Appointment() {
   const [startDate, setStartDate] = useState(new Date());
@@ -21,28 +23,34 @@ export default function Appointment() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const appointmentDetails = { ...formData, time: startDate };
 
-    try {
-      await (("appointments"), appointmentDetails);
-      alert('Appointment scheduled successfully');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        ID: '',
-        contact: '',
-        appointment: '',
-        other: '',
-      });
-      setStartDate(new Date());
-    } catch (error) {
-      console.error('Error adding document: ', error);
-      alert('Error scheduling appointment');
-    }
-  };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  const appointmentDetails = { ...formData, time: startDate };
+
+  try {
+    const { data, error } = await supabase
+      .from('appointment') // Change to your table name
+      .insert([appointmentDetails]);
+
+    if (error) throw error; // Handle errors
+
+    alert('Appointment scheduled successfully');
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      ID: '',
+      contact: '',
+      appointment: '',
+      other: '',
+    });
+    setStartDate(new Date());
+  } catch (error) {
+    console.error('Error adding document: ', error);
+    alert('Error scheduling appointment');
+  }
+};
 
   return (
 
