@@ -2,12 +2,36 @@ import React from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import { Link } from 'react-router-dom'
-import { departments, services, FAQs } from './homeData'
+import { departments, services } from './homeData'
+import FAQS from './FAQS'
 
+const navLinks = [
+  {
+    id: 1,
+    label: "About",
+    href: "#about",
+  },
+  {
+    id: 2,
+    label: "Department",
+    href: "#departments",
+  },
+  {
+    id: 3,
+    label: "Services",
+    href: "#services",
+  },
+  {
+    id: 4,
+    label: "Contact",
+    href: "#contact",
+  },
+];
 export default function Home() {
+
   return (
     <div>
-      <Navbar />
+      <Navbar navLinks={navLinks} />
       <section className="hero" id="home">
         <article>
           <h5>FOREVERCARE</h5>
@@ -93,18 +117,9 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="FAQ-section">
-        <h2>Answers To</h2>
-        <h1> Frequently Asked Questions</h1>
-        <div className="FAQ-container">
-          {FAQs.map((FAQ) => (
-            <div className="FAQ-box" key={FAQ.id}>
-              <span>+</span>
-              <p>{FAQ.question}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+
+      <FAQS/>
+      
       <section className="contact" id="contact">
         <div className="home_heading-center">
           <div>
