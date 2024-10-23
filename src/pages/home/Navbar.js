@@ -1,34 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar({navLinks}) {
 
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => setIsOpen(!isOpen);
 
-  const navLinks = [
-    {
-      id: 1,
-      label: "About",
-      href: "#about",
-    },
-    {
-      id: 2,
-      label: "Department",
-      href: "#departments",
-    },
-    {
-      id: 3,
-      label: "Services",
-      href: "#services",
-    },
-    {
-      id: 4,
-      label: "Contact",
-      href: "#contact",
-    },
-  ];
+
 
   return (
     <header>

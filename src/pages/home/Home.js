@@ -5,12 +5,33 @@ import { Link } from 'react-router-dom'
 import { departments, services } from './homeData'
 import FAQS from './FAQS'
 
+const navLinks = [
+  {
+    id: 1,
+    label: "About",
+    href: "#about",
+  },
+  {
+    id: 2,
+    label: "Department",
+    href: "#departments",
+  },
+  {
+    id: 3,
+    label: "Services",
+    href: "#services",
+  },
+  {
+    id: 4,
+    label: "Contact",
+    href: "#contact",
+  },
+];
 export default function Home() {
-
 
   return (
     <div>
-      <Navbar />
+      <Navbar navLinks={navLinks} />
       <section className="hero" id="home">
         <article>
           <h5>FOREVERCARE</h5>
