@@ -1,62 +1,41 @@
 import React from 'react';
+import Footer from '../home/Footer';
 
 import "../aboutUs/aboutUs.css"
+import Navbar from '../home/Navbar';
 
 
 export default function AboutUs() {
   
   
-  
-
-  // const aboutNavLinks = [
-  //   { id: 1, label: 'Home', 
-  //     href: '/home' 
-  //   },
-  //   { id: 2, label: 'Our Story', 
-  //     href: '#uniqueStory' 
-  //   },
-  //   { id: 3, label: 'Healthcare Professionals', 
-  //     href: '#doctors' 
-  //   },
-  //   { id: 4, label: 'Development Team', 
-  //     href: '#devTeam' 
-
-  //   },
-  //   // { id: 5, label: 'Appointment', 
-  //   //   button: true 
-
-  //   // },
-  // ];
+  const aboutLinks = [
+    {
+      id: 1,
+      label: "About",
+      href: "#about"
+    },
+    {
+      id: 2,
+      label: "Our Story",
+      href: "#uniqueStory"
+    },
+    {
+      id: 3,
+      label: "Healthcare Proffesionals",
+      href: "#services"
+    },
+    {
+      id: 4,
+      label: "Development Team",
+      href: "#contact"
+    }]
 
 
   return (
     <div>
       {/* Header */}
       <header>
-        <nav className="small-navbar">
-          <ul>
-            <li><i className="fa-solid fa-phone"></i>021 123 4566</li>
-            <li><i className="fa-solid fa-location-dot"></i>Saltriver, Cape Town, South Africa</li>
-            <li><a href="/LoginForm">login</a> | <a href="/signUp">signup</a></li>
-          </ul>
-        </nav>
-        <nav className="navbar">
-          <h4>FOREVERCARE</h4>
-          <ul>
-            <li><a href="/home">Home</a></li>
-            <li><a href="#uniqueStory">Our Story</a></li>
-            <li><a href="#doctors">Healthcare Professionals</a></li>
-            <li><a href="#devTeam">Development Team</a></li>
-            <li><button className="button-style mobile-button">Appointment</button></li>
-          </ul>
-          <div className="user-box">
-            <a href="/appointment"><button className="button-style" id="mobile-button">Appointment</button></a>
-            <a href="portal.html"><i className="fa-solid fa-user"></i></a>
-          </div>
-          <div className="mobile">
-            <i id="bar" className="fa-solid fa-bars"></i>
-          </div>
-        </nav>
+        <Navbar navLinks={aboutLinks}/>
       </header>
 
       {/* Main content */}
@@ -164,8 +143,8 @@ export default function AboutUs() {
               <p className="name">Mogamat Jaleel Lee</p>
               <p className="quote">"Be the change you wish to see <br />in the world"</p>
               <div className="social-icons">
-                <a href="#"><i className="fa-brands fa-github"></i></a>
-                <a href="#"><i className="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Lee01-bit "><i className="fa-brands fa-github"></i></a>
+                <a href="www.linkedin.com/in/jaleel-lee-6b441920b"><i className="fa-brands fa-linkedin"></i></a>
               </div>
             </div>
             <div className="team-member">
@@ -173,8 +152,8 @@ export default function AboutUs() {
               <p className="name">Shabbeer Petersen</p>
               <p className="quote">"Everything you've done up until<br/>now has not gone to waste."</p>
               <div className="social-icons">
-                <a href="#"><i className="fa-brands fa-github"></i></a>
-                <a href="#"><i className="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Shabbeer10"><i className="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/shabbeer-petersen-342868277"><i className="fa-brands fa-linkedin"></i></a>
               </div>
             </div>
             <div className="team-member">
@@ -191,47 +170,14 @@ export default function AboutUs() {
               <p className="name">Mulalo Masithembi</p>
               <p className="quote">"Your patience is your power."</p>
               <div className="social-icons">
-                <a href="#"><i className="fa-brands fa-github"></i></a>
-                <a href="#"><i className="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Mu936/"><i className="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mulalo-ivy-masithembi-7a74b9329"><i className="fa-brands fa-linkedin"></i></a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Footer */}
-        {/* <footer>
-          <div className="footer-list-box">
-            <ul className="footer-socials">
-              <li><i className="fa-brands fa-linkedin"></i></li>
-              <li><i className="fa-brands fa-google-plus"></i></li>
-              <li><i className="fa-brands fa-square-twitter"></i></li>
-              <li><i className="fa-brands fa-facebook"></i></li>
-            </ul>
-            <div className="footer-list">
-              <dl>
-                <dt>Quick Links</dt>
-                <dd>Home</dd>
-                <dd>About Us</dd>
-                <dd>Services & Departments</dd>
-                <dd>Contact Us</dd>
-              </dl>
-              <dl>
-                <dd>FAQs</dd>
-                <dd>Privacy Policy</dd>
-                <dd>Terms & Conditions</dd>
-                <dd>Support</dd>
-              </dl>
-              <dl>
-                <dt>Contact Info</dt>
-                <dd><i className="fa-solid fa-phone"></i>021 7402 5314</dd>
-                <dd><i className="fa-solid fa-location-dot"></i>Saltriver, Cape Town</dd>
-                <dd><i className="fa-solid fa-envelope"></i>forevercare@gmail.com</dd>
-                <dd><i className="fa-solid fa-clock"></i>24hr open</dd>
-              </dl>
-            </div>
-            <p className="footer-text">© 2024 ForeverCare. All rights reserved.</p>
-          </div> */}
-        {/* </footer> */}
+        <Footer></Footer>
       </main>
     </div>
   );
