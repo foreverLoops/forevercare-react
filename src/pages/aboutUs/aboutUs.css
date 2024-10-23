@@ -64,8 +64,8 @@
 .mobile-button{
     display: none;
 }
-.mobile {
-    display: none;
+.mobile{
+    /* display: none; */
 }
 .user-box i{
     background: #BBE6E4;
