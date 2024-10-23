@@ -1,5 +1,7 @@
-import './SignUpForm.css';
-import { supabase } from './supabaseClient'; // Import Supabase client
+//import './SignUpForm.css';
+// import { supabase } from 'src/supabaseClient.js'; // Import Supabase client
+
+import {supabase} from "./supabaseClient";
 
 const TestForm = () => {
   const handleSubmit = async (event) => {

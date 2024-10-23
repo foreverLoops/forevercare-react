@@ -8,8 +8,8 @@ import LoginForm from './pages/login/LoginForm';
 import SignUpForm from './pages/signup/SignUpForm';
 import Home from "./pages/home/Home"
 import Modal from './pages/appointment/feedbackFormModal';
-import TestLogin from './pages/login/TestLogin';
-import TestForm from './pages/signup/TestForm';
+import TestForm from './TestForm';
+import TestLogin from './TestLogin';
 
 function App() {
   return (
@@ -22,8 +22,8 @@ function App() {
       <Route path='/' element={<LoginForm/>}/>
       <Route path='/SignUpForm' element={<SignUpForm/>}/>
       <Route path='/modal' element={<Modal/>}/>
-      <Route path='/testlogin' element={<TestLogin/>}/>
-      <Route path='/testform' element={<TestForm/>}/>
+      <Route path='/TestLogin' element={<TestLogin/>}/>
+      <Route path='/TestForm' element={<TestForm/>}/>
 
     </Routes>
   </BrowserRouter>

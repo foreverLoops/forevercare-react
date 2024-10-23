@@ -52,10 +52,6 @@ export default function PortalPage() {
           <span></span>
         </label>
 
-<<<<<<< HEAD
-      <aside side className="content-data">
-        <div className="display-data">
-=======
         <nav className="sidebar-container">
           <div className="sidebar">
             <ul>
@@ -71,7 +67,6 @@ export default function PortalPage() {
             </ul>
           </div>
         </nav>
->>>>>>> 5d5cd580849541b2b266e3730d94350b730b883a
 
         <aside className="content">
           <div className="display">
