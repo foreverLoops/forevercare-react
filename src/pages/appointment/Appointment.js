@@ -4,13 +4,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import "./appointmentStyles.css";
 import Modal from "./feedbackFormModal"
 
-import React, { useState } from 'react';
-import DatePicker from 'react-datepicker';
-import "react-datepicker/dist/react-datepicker.css";
-import "./appointmentStyles.css";
-import { db } from './firebase'; // Import your Firebase configuration
-import { collection, addDoc } from "firebase/firestore"; // Import Firestore functions
-
 export default function Appointment() {
   const [startDate, setStartDate] = useState(new Date());
   const [formData, setFormData] = useState({
@@ -33,8 +26,7 @@ export default function Appointment() {
     const appointmentDetails = { ...formData, time: startDate };
 
     try {
-      // Add a new appointment to Firestore
-      await addDoc(collection(db, "appointments"), appointmentDetails);
+      await (("appointments"), appointmentDetails);
       alert('Appointment scheduled successfully');
       setFormData({
         name: '',
@@ -53,7 +45,7 @@ export default function Appointment() {
   };
 
   return (
-   
+
     <>
     <body className="backgroundImage">
       <div >

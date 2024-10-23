@@ -16,7 +16,7 @@ export default function Modal(){
         <FaWpforms  onClick ={toggleModal}
             className = "btn-modal"
             />
-       
+
         {modal && (
             <div className="modal">
             <div onClick ={toggleModal} className="overlay"></div>
@@ -30,7 +30,7 @@ export default function Modal(){
                             <label className="form-label" htmlFor="name">First Name:</label> <input className="user-input" id="firstName" type="text"/>
                         </div>
                         <div className="patientLast">
-                           <label className="form-label" htmlFor="lastName">Last Name:</label> <input className="user-input" id="lastName" type="text"/>
+                            <label className="form-label" htmlFor="lastName">Last Name:</label> <input className="user-input" id="lastName" type="text"/>
                         </div>
                         
                     </section> 
@@ -80,7 +80,6 @@ export default function Modal(){
 
 
         </>
-    )
-   
+    )   
 
 }
