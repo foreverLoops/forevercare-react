@@ -1,13 +1,29 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { supabase } from "../../supabaseClient";
 
-export default function Navbar({navLinks}) {
-
+export default function Navbar({ navLinks }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [user, setUser] = useState(null);  // Track user state
+  const navigate = useNavigate();
 
   const toggleNavbar = () => setIsOpen(!isOpen);
 
+  // Check for an authenticated user on component mount
+  useEffect(() => {
+    const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {
+      setUser(session?.user || null);  // Set user if logged in, otherwise null
+    });
 
+    return () => authListener  // Clean up the listener
+  }, []);
+
+  // Handle user logout
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    setUser(null);
+    navigate("/");  // Redirect to home after logout
+  };
 
   return (
     <header>
@@ -23,7 +39,13 @@ export default function Navbar({navLinks}) {
             <p>Saltriver, Cape Town, South Africa</p>
           </li>
           <li>
-            <Link to="/">login</Link> | <Link to="/SignupForm">signup</Link>
+            {user ? (
+              <p className="home-logout" onClick={handleLogout}>Logout</p>
+            ) : (
+              <>
+                <Link to="/">Login</Link> | <Link to="/SignupForm">Signup</Link>
+              </>
+            )}
           </li>
         </ul>
       </nav>

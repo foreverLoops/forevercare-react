@@ -23,6 +23,11 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0 2rem;
     display: flex;
 }
+.small-navbar .home-logout{
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
 .small-navbar a{
     text-decoration: none;
     color: black;
@@ -30,7 +35,7 @@ h1, h2, h3, h4, h5, h6, p {
     font-weight: 600;
     font-size: 1rem;
 }
-.small-navbar a:hover{
+.small-navbar a:hover, .small-navbar .home-logout:hover{
     scale: 1.1;
 }
 
