@@ -236,7 +236,7 @@ background-color: #f5f7f61e;
 
 /* This Part is for the Carousel */
 .carousel{
-    height:80vh ;
+    height:100vh ;
     background:#FFF;
     border-top:2px solid #FFF ;
     border-bottom:2px solid #FFF ;
@@ -251,17 +251,14 @@ background-color: #f5f7f61e;
     cursor: pointer;
     white-space: wrap;
     scroll-behavior: smooth;
-   
-   
- 
-   
-   
+    margin: 0;
+    padding: 0;  
 }
 .container{
    position: relative;
    top: 20px;
    /* transform: translateY(-50%); */
-   left: 5%;
+   /* left: 5%; */
     width:90vw;
    
  
@@ -285,7 +282,7 @@ background-color: #f5f7f61e;
     width: 400px;
     display: block;
     background:#bbe6e469;
-    padding: 20px;
+    padding: 20px 10px;
     border-radius: 12px;
     text-decoration: none;
     border: 2px solid transparent;
@@ -362,13 +359,17 @@ background-color: #f5f7f61e;
 /* } */
  
 .grid-container {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     justify-items: center;
     margin: auto;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 20px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     
 }

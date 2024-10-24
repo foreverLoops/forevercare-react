@@ -123,7 +123,7 @@ export default function AboutUs() {
           <h1 className="heading-center">Development Team</h1>
           <div className="team-container">
             <div className="team-member">
-              <img src="/media/Aphiwe.jpg" alt="Profile Picture" className="avatar" />
+              <img src="/media/Aphiwe.jpg" alt="Profile" className="avatar" />
               <p className="name">Aphiwe Ncayiyane</p>
               <p className="quote">"How is never as important as why"</p>
               <div className="social-icons">
@@ -132,7 +132,7 @@ export default function AboutUs() {
               </div>
             </div>
             <div className="team-member">
-              <img src="/media/mogamat.jpg" alt="Profile Picture" className="avatar" />
+              <img src="/media/mogamat.jpg" alt="Profile " className="avatar" />
               <p className="name">Mogamat Jaleel Lee</p>
               <p className="quote">"Be the change you wish to see <br />in the world"</p>
               <div className="social-icons">
@@ -141,7 +141,7 @@ export default function AboutUs() {
               </div>
             </div>
             <div  className="team-member">
-              <img src="/media/petersen.jpg" alt="Profile Picture" className="avatar" />
+              <img src="/media/petersen.jpg" alt="Profile" className="avatar" />
               <p className="name">Shabbeer Petersen</p>
               <p className="quote">"Everything you've done up until<br/>now has not gone to waste."</p>
               <div className="social-icons">
@@ -150,7 +150,7 @@ export default function AboutUs() {
               </div>
             </div>
             <div className="team-member">
-              <img src="/media/yusri.jpg" alt="Profile Picture" className="avatar" />
+              <img src="/media/yusri.jpg" alt="Profile" className="avatar" />
               <p className="name">Yusri Nelson</p>
               <p className="quote">"Futures don't make themselves,<br/> you create them."</p>
               <div className="social-icons">
@@ -159,7 +159,7 @@ export default function AboutUs() {
               </div>
             </div>
             <div className="team-member">
-              <img src="/media/mulalo.jpg" alt="Profile Picture" className="avatar" />
+              <img src="/media/mulalo.jpg" alt="Profile" className="avatar" />
               <p className="name">Mulalo Masithembi</p>
               <p className="quote">"Your patience is your power."</p>
               <div className="social-icons">
