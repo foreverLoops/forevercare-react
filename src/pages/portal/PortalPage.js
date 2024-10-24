@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import supabase from "../../supabaseClient.js";
+import {supabase} from "../../supabaseClient.js";
 
 export default function PortalPage() {
   return (
