@@ -8,8 +8,10 @@ import LoginForm from './pages/login/LoginForm';
 import SignUpForm from './pages/signup/SignUpForm';
 import Home from "./pages/home/Home"
 import Modal from './pages/appointment/feedbackFormModal';
-import TestForm from './TestForm';
-import TestLogin from './TestLogin';
+import Dashboard from './pages/portal/Dashboard'; // Your existing Dashboard component
+import MedicalRecords from './pages/portal/MedicalRecords'; // Your existing MedicalRecords component
+import Profile from './pages/portal/Profile'; // Your existing Profile component
+import Notifications from './pages/portal/Notifications'; // Your existing Notifications component
 
 function App() {
   return (
@@ -18,12 +20,15 @@ function App() {
       <Route path='/home' element={<Home />}/>
       <Route path='/about' element={<AboutUs/>}/>
       <Route path='/appointment' element={<Appointment/>}/>
-      <Route path='/portal' element={<PortalPage/>}/>
+      <Route path="/portal" element={<PortalPage />}>
+          <Route index element={<Dashboard />} /> {/* Default page in the portal */}
+          <Route path="profile" element={<Profile />} />
+          <Route path="medical-records" element={<MedicalRecords />} />
+          <Route path="notifications" element={<Notifications />} />
+        </Route>
       <Route path='/' element={<LoginForm/>}/>
       <Route path='/SignUpForm' element={<SignUpForm/>}/>
       <Route path='/modal' element={<Modal/>}/>
-      <Route path='/TestLogin' element={<TestLogin/>}/>
-      <Route path='/TestForm' element={<TestForm/>}/>
 
     </Routes>
   </BrowserRouter>
