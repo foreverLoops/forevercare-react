@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {supabase} from "../../supabaseClient.js";
 
 export default function PortalPage() {
   return (
@@ -68,8 +69,8 @@ export default function PortalPage() {
           </div>
         </nav>
 
-        <aside className="content">
-          <div className="display">
+        <aside className="content-container">
+          <div className="display-container">
             {/* Dynamic content will go here based on selected sidebar link */}
           </div>
         </aside>

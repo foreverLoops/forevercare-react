@@ -4,6 +4,7 @@ import Footer from './Footer'
 import { Link } from 'react-router-dom'
 import { departments, services } from './homeData'
 import FAQS from './FAQS'
+import HowWeWork from './HowWeWork'
 
 const navLinks = [
   {
@@ -61,7 +62,7 @@ export default function Home() {
             </Link>
           </div>
         </section>
-        <aside>
+        <aside id='aside'>
           <div className="about-img">
 
           </div>
@@ -91,7 +92,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="line"></div>
+        <div className="line-split"></div>
 
         <div className="services_outer-box" id="services">
           {services.slice(0, 2).map((service) => (
@@ -117,7 +118,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-
+      <HowWeWork />
       <FAQS/>
       
       <section className="contact" id="contact">
@@ -129,11 +130,16 @@ export default function Home() {
         </div>
         <div className="contact-box">
           <div className="map-box">
-            {/* <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.3017348887875!2d18.45808437501857!3d-33.933366722404706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5db42c93a685%3A0xec815c21c6eaef71!2sCapaCiTi%20Tech%20Career%20Accelerator!5e0!3m2!1sen!2sza!4v1724001290503!5m2!1sen!2sza"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe> */}
+          <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.3017348887875!2d18.45808437501857!3d-33.933366722404706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5db42c93a685%3A0xec815c21c6eaef71!2sCapaCiTi%20Tech%20Career%20Accelerator!5e0!3m2!1sen!2sza!4v1724001290503!5m2!1sen!2sza"
+        width="600"
+        height="450"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Google Map"
+      ></iframe>
           </div>
           <div className="form-box">
             <h1>Send Us A Message</h1>
@@ -148,7 +154,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      <a href="#navbar"><span class="toTop">
+            <i class="fa-solid fa-caret-up"></i>
+        </span>
+    </a>
       <Footer />
     </div>
   )
