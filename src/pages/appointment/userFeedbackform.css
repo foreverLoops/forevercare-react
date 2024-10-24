@@ -1,101 +1,118 @@
-body.active-modal {
-    overflow-y: hidden;
-    background-color: black;
-   
-
-}
-
 .btn-modal {
-    padding: 10px 20px;
-    display: block;
-    margin: 50px auto ;
-    font-size: 18px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #56b5e3;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
     cursor: pointer;
-    height: 50px;
-    width:100px ;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
 }
 
-.modal, .overlay {
-    width: 70vw;
-    height: 100vh;
-    top: -10%;
-    left: -10%;
+.btn-modal:hover {
+    background-color: #007bff;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
     right: 0;
     bottom: 0;
-    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
-.modal{
-    height: 100vh;
-    margin: 20px;
-    
-
-    
-}
-    
 
 .modal-content {
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    line-height: 1.4;
-    background: #f1f1f1;
-    padding: 14px 28px;
-    border-radius: 3px;
-    max-width: 700px;
-    min-width: 500px;
+    background: #fff;
     border-radius: 10px;
-    background-image:url(../../../public/backgroundFeedbackForm.jpg) ;
-    background-repeat: no-repeat;
-    background-size: cover ;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 
-
-
-.heading-form{
-    font-size:1.7em ;
-    margin: 0 auto;
-    text-align: center;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-.form-info{
-    display: block;
-    padding: 10px;
-    margin: 20px;
-}
-.form-label{
-    font-size: 20px ;
-    color: #327f92 ;
-}
-
-.experience{
-    display: flex ;
+.form-container {
+    display: flex;
     flex-direction: column;
-    padding: 10px;
-   
 }
 
-.input-labels{
-    padding: 5px;
-    margin: 5px;
-    font-size: 1.1rem;
-}
-
-.textarea-container{
-    resize: none;
-    width: 20vw;
-    color: black;
-    font-size: 1.4em;
-}
-
-.patientInfo,.patientLast{
+.heading-form {
+    text-align: center;
+    font-size: 1.8em;
     margin-bottom: 20px;
 }
 
-.user-input{
-    height: 3vh;
-    border-radius: 10px;
-    margin-left: 10px;
-    text-align: center;
+.form-label {
+    font-weight: bold;
+}
 
+.user-input {
+    border: 2px solid #56b5e3;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.textarea-container {
+    border: 2px solid #56b5e3;
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.input-labels {
+    margin: 5px 0;
+}
+
+.submitButtonContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#submitButton, .close-modal {
+    background: #56b5e3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+#submitButton:hover, .close-modal:hover {
+    background: #007bff;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+    }
 }

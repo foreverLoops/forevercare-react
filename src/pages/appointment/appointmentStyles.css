@@ -1,433 +1,203 @@
-
-.backgroundImage{
-    margin: 0%;
-    padding: 0%;
-    background-image:url(backgroundForm.webP) ;
+/* Background Image */
+.backgroundImage {
+    
+    background-image: url(backgroundForm.webP);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;  ;
-    height: 170vh
-}  
+    background-repeat: no-repeat;
+    height: 150vh; 
+}
 
-.title{
+/* Title */
+.title {
     font-size: 3em;
-    margin-left:25% ;
-
-}
-
-.form{
-    background:#56B5E3  ;
-    border-radius: 10px;
-    width: 55vw;
-    padding:30px;
-    margin-left: 150px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    backdrop-filter: blur(10px);     
-}
-
-
-/* this is the first section containing the information on the patients */
-
-
-
-
-
-.radio01{
-    display: flex;
-    flex-direction:row
-
-}
-
-
-
-
-
-.info{
     text-align: center;
-    margin-top: 10px ;
-    margin-bottom:10px ;
-    padding-bottom: 15px;  
-    padding-top: 15px;
-    width: 20vw;
-    background-color:#ffffff27 ;  
-    border-radius: 15px;
-    border:none;
-    font-size: 1em;
-    
+    color: #ffffff; 
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); 
+    padding-bottom:20px ;
 }
 
-
-
-
-.info2{
-    
-    margin-top: 20px ;
-    margin-bottom:20px ;
-}
-.info3{
-    margin-top:15px;
-    margin-bottom:20px
+/* Form Container */
+.form {
+    background: rgba(255, 255, 255, 0.699); 
+    border-radius: 20px; 
+    width: 50vw; 
+    padding: 40px;
+    margin: 10px auto; 
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
 }
 
-.info4{
-    margin-left: 7vw;
-    display: block;
-
-}
-
-
-
-
-.info-global{
-    width:25vw;
-    text-align:left;
-}
-
-.labelContainer{
-    margin-left: 20px;
-    font-size: 25px;
-
-}
-
-.info-details{
-    display: inline-flex;
-}
-
-
-/* this is the second section of the information where the appointment is placed */
-
-.appointmentSub{
-    font-size: 20px;
-    margin:0 auto;
-    text-align: center;
-    text-decoration: underline;
-}
-
-.appointmentHeading{
-    margin-left: 170px;
-    margin-top: 50px;
-}
-
-.listItems{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-   
-}
-
-
-
-
-.app1{
-    margin:20px 25px 5px 0px;        
-    padding-left: 20px;
-    font-size: 20px;
-    
-
-}
-.app01{
-    /* margin shorthand top right bottom left */
-    margin:20px 25px 5px 0px;        
-    font-size: 20px;
-    
-}
-
-.appoint{
+/* Info Details */
+.info-details {
     display: flex;
     flex-direction: column;
-    align-content: space-between;
-}
-
-.textarea{
-    text-align: center;
-    resize: none;
-    font-size:1em;
-    height: 40px;
-    border:3px solid black;
-    border-radius: 10px;
-    color: black;
-    font-size: 1em;
-    text-align: center;
-    margin-left: 60px;
-    margin-top: 10px ;
-    margin-bottom:10px ;
-    padding-bottom: 15px;  
-    padding-top: 15px;
-    width: 20vw;
-    
-}
-
-
-.time{
-    padding: 10px;
-    margin: 5px;
-    font-size: 20px;
-
-}
-
-.app-time{
-    padding: 10px;
-   
-}
-
-
-.submit_button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-}
-
-.button[type="submit"]{
-    padding-top:20px ;
-    padding-bottom:20px ;
-    padding-left:20px ;
-    padding-right:20px ;
-    border-radius: 10px;
-    cursor: pointer;
     margin-bottom: 20px;
-    background-color: #56B5E3;
-
 }
 
+/* Labels */
+.labelContainer {
+    font-size: 1.2em; 
+    color: #333; 
+    margin-bottom: 5px; 
+}
+
+/* Input Fields */
+.info {
+    padding: 10px;
+    border: 2px solid #56b5e3; 
+    border-radius: 10px; 
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.info:focus {
+    border-color: #007bff; 
+}
+
+/* Radio Buttons */
+.radio01 {
+    display: block;
+    margin-top: 10px; 
+}
+
+/* Appointment Section */
+.appointment_info {
+    margin: 20px 0; 
+}
+
+.appointmentHeading {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 1.8em; 
+    color: #333; 
+}
+
+.appointmentSub {
+    font-size: 1.5em; 
+    text-align: center;
+    color: #555; 
+}
+
+/* List Items */
+.listItems {
+    list-style: none; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+/* Appointment Item Styles */
+.appoint {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    margin: 10px 20px; 
+    font-size: 1em; 
+    color: #444; 
+}
 
 .app01{
-    justify-content: space-between;
+    margin: 0 10px; 
+}
+
+input[type="radio"] {
+    margin-right: 10px; 
+    accent-color: #56b5e3; 
+    cursor: pointer;
+
 }
 
 
-.app-time{
-    display: block;
-    padding:10px;
-    margin-bottom: 25px;
+/* Textarea */
+.textarea {
+    padding: 10px;
+    border: 2px solid #56b5e3; 
+    border-radius: 10px;
+    width: 90%; 
+    margin: 10px auto; 
+    resize: none; 
+    transition: border-color 0.3s;
+    color: #000;
 }
 
-.time{
-    margin-left: 15vw;
-   
+.textarea:focus {
+    border-color: #007bff; 
 }
+
+/* Time and Submit Button Styles */
+.app-time {
+    margin: 20px 0;
+    text-align: center; 
+}
+
+.time {
+    font-size: 1.2em; 
+}
+
+.submit_button {
+    display: flex;
+    justify-content: center; 
+}
+
+.button {
+    padding: 15px 30px; 
+    border-radius: 25px; 
+    cursor: pointer;
+    background-color: #56b5e3; 
+    color: #fff; 
+    font-size: 1.2em; 
+    border: none; 
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background-color: #007bff; 
+    transform: scale(1.05); 
+}
+
 .modal-container{
     position: absolute;
-    top: -15%;
-    left:-15%;
+    bottom: 95%;
 }
 
-
-
-@media (max-width:1024px ){
-
-    .container{
-        margin:0 auto;
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .form {
+        width: 75vw; /* More responsive width */
     }
 
-   
-    .title{
-        font-size: 35px;
-        margin-left: 150px;
-    }
-
-    .info-global{
-    width: 35vw;
-    text-align: left;
-    
-    }
-   .info-details {
-    display: inline-flex;
-   
-}
-
-    .form{
-        border-color: black;
-        margin:10px auto;
-        padding:10px;
-        width:80vw;
-        border:1px solid #56B5E3;
-
-    }
-
-    
-
-    .appointmentHeading{
-        margin-left:70px
-    }
-     .app01{
-        margin-left: 1px;
-    } 
-
-    .textarea{
-        margin-left:25px;
-        width:40vw
-    }
-    .radio01{
-        /* margin-top:10px; */
-        margin-bottom:20px;
-        margin-right: 0px;
-        margin-left:50px ;
-        
-    } 
-    
-    .appoint{
-        display: flex;
-        flex-direction: column;
-        align-content: space-between;
-        margin-left: 0px;
-    }
-
-     .time{
-        margin:0 auto;
-     }
-
-     .submit_button{
-        margin-left: 180px;
-     }
-}
-@media (max-width:768px ){
-    
-    
-    .info{
-        margin-bottom:10px ;
-       
-    }
-
-    .form{    
-    
-        width: 75vw;
-        padding: 5px;
-        border:1px solid #56b4e328;
-        margin: 0;
-        margin-top: 45px;
-        margin-left:90px
-
-    }
-
-
-    .info-global{
-        width: 45vw;
-        text-align: left;
-        
-    }
-
-    .title{
-        font-size: 40px;
-        text-align: center;
-        margin-left: 140px;
-    }
-
-    
-}
-
-@media (max-width:425px){
-    .title{
-        margin-left: 150px;
-        font-size: 35px;
-    }
-    
-
-     .heading-form{
-        margin-left: 50px ;
-        
-    } 
-    
-
-    .form{
-        width: 85vw;
-        margin:30px auto;
-    }
-
-
-    .info-details{
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-
-    }
-    
-
-    .info-global{
-        margin-left:90px
-    }
-    .info-global01{
-        margin-left:25px
-    }
-
-    .radio01{
-        margin-left: -40px;
-        padding: 10px;
-
-    }
-
-    .info{
-    text-align: center;
-    width: 50vw;
-    font-size: 1em;}
-
-    .appointmentHeading{
-        margin-left: 40px;
-    }
-
-    .listItems{
-        list-style: none;
-        display: flex;
-        flex-direction: column-reverse;
-        
-    }
-
-    .textarea{
-        width: 50vw;
-        margin-left: 20px;
-    }
-    .app1{
-        margin-left: 15px
-    }
-    
-    
-    
-    }
-@media (max-width:375px){
-    .form{
-        
-        width:100vw
-
-    }
-    .title{
-        margin-left: 120px;
-        font-size: 25px;
-    } 
-
-    .listItems{
-        list-style: none;
-        display: flex;
-        flex-direction: column-reverse;
-        
-    }
-   
-} 
-@media (max-width: 320px){
-    .heading{
-        margin-left: 10px;
-        font-size: 25px;
-        margin-top: 0;
-    } 
-
-   
-    .form{
-      
-        margin:0px 20px;
-        padding:10px;
-        width:100vw;
-        
-
-    }
-
-    .container{
-        margin-top: 0 ;
-    }
-    .listItems{
-        list-style: none;
-        display: flex;
-        flex-direction: column-reverse;
-        
+    .title {
+        font-size: 2.5em; /* Adjust title size */
     }
 }
 
+@media (max-width: 768px) {
+    .form {
+        width: 90vw; /* Almost full width */
+    }
+
+    .title {
+        font-size: 2em; /* Smaller title */
+    }
+}
+
+@media (max-width: 425px) {
+    .form {
+        width: 95vw; /* Nearly full width */
+    }
+
+    .title {
+        font-size: 1.5em; /* Smaller title */
+    }
+}
+
+@media (max-width: 375px) {
+    .form {
+        width: 100vw; /* Full width */
+    }
+
+    .title {
+        font-size: 1.3em; /* Smaller title */
+    }
+}

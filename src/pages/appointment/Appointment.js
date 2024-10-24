@@ -3,7 +3,7 @@ import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import "./appointmentStyles.css";
 import Modal from "./feedbackFormModal"
-import { supabase } from './supabaseClient.js'
+import { supabase } from '../../supabaseClient.js'
 
 
 export default function Appointment() {
@@ -30,10 +30,10 @@ const handleSubmit = async (e) => {
 
   try {
     const { data, error } = await supabase
-      .from('appointment') // Change to your table name
+      .from('appointment') 
       .insert([appointmentDetails]);
 
-    if (error) throw error; // Handle errors
+    if (error) throw error; // Handles Erros that occurs 
 
     alert('Appointment scheduled successfully');
     setFormData({
@@ -75,14 +75,14 @@ const handleSubmit = async (e) => {
                 <span className="info-global">
                   <label className="labelContainer" htmlFor="email">Email</label>
                 </span>
-                <input id="email" className="info" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="example@gmail.com" />
+                <input id="email" className="info" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="Johndoe01@gmail.com" />
               </div>
 
               <div className="info-details">
                 <span className="info-global">
                   <label className="labelContainer" htmlFor="phone">Phone Number</label>
                 </span>
-                <input id="phone" className="info" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="e.g 098-098-5674" required />
+                <input id="phone" className="info" name="phone" type="tel" value={formData.phone} onChange={handleChange} maxLength="10" placeholder="e.g 098-098-5674" required />
               </div>
 
               <div className="info-details">
@@ -116,16 +116,19 @@ const handleSubmit = async (e) => {
                     <li className="app01"><input name="appointment" value="Other" onChange={handleChange} type="radio" /> Other...</li>
                   </div>
                   <div className="appoint">
-                    <li className="app1"><input name="appointment" value="Allergic Diseases" onChange={handleChange} type="radio" /> Allergic Diseases</li>
-                    <li className="app1"><input name="appointment" value="Physio" onChange={handleChange} type="radio" /> Physio</li>
-                    <li className="app1"><input name="appointment" value="Pediatrics" onChange={handleChange} type="radio" /> Pediatrics</li>
-                    <li className="app1"><input name="appointment" value="INR" onChange={handleChange} type="radio" /> INR</li>
+                    <li className="app01"><input name="appointment" value="Allergic Diseases" onChange={handleChange} type="radio" /> Allergic Diseases</li>
+                    <li className="app01"><input name="appointment" value="Physio" onChange={handleChange} type="radio" /> Physio</li>
+                    <li className="app01"><input name="appointment" value="Pediatrics" onChange={handleChange} type="radio" /> Pediatrics</li>
+                    <li className="app01"><input name="appointment" value="INR" onChange={handleChange} type="radio" /> INR</li>
                   </div>
                   <div>
-                    <li className="app1"><input name="appointment" value="Dermatology" onChange={handleChange} type="radio" /> Dermatology</li>
-                    <li className="app1"><input name="appointment" value="Disorders" onChange={handleChange} type="radio" /> Disorders</li>
-                    <li className="app1"><input name="appointment" value="Infectious Diseases" onChange={handleChange} type="radio" /> Infectious Diseases</li>
-                    <li className="app1"><input name="appointment" value="Nutrition & Dietician" onChange={handleChange} type="radio" /> Nutrition & Dietician</li>
+                  <div className="appoint">
+
+                    <li className="app01"><input name="appointment" value="Dermatology" onChange={handleChange} type="radio" /> Dermatology</li>
+                    <li className="app01"><input name="appointment" value="Disorders" onChange={handleChange} type="radio" /> Disorders</li>
+                    <li className="app01"><input name="appointment" value="Infectious Diseases" onChange={handleChange} type="radio" /> Infectious Diseases</li>
+                    <li className="app01"><input name="appointment" value="Nutrition & Dietician" onChange={handleChange} type="radio" /> Nutrition & Dietician</li>
+                  </div>
                   </div>
                 </ul>
                 <div className="info-other">
@@ -155,7 +158,7 @@ const handleSubmit = async (e) => {
               </div>
             </section>
           </form>
-          <div className='modal-container'><Modal/></div>
+          <div title='UserfeedBack Form' className='modal-container'><Modal/></div>
 
         </div>
         
