@@ -4,7 +4,9 @@ import "react-datepicker/dist/react-datepicker.css";
 import "./appointmentStyles.css";
 import Modal from "./feedbackFormModal"
 import { supabase } from '../../supabaseClient'
+import { useNavigate } from 'react-router-dom';
 
+// Function that handles the form and submits the data into supabase 
 export default function Appointment() {
   const [startDate, setStartDate] = useState(new Date());
   const [formData, setFormData] = useState({
@@ -16,6 +18,7 @@ export default function Appointment() {
     appointment: '',
     other: '',
   });
+  const navigate = useNavigate() ;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,13 +29,12 @@ export default function Appointment() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const appointmentDetails = { ...formData, time: startDate.toISOString() }; // Convert to ISO string if necessary
-  
     try {
       const { data, error } = await supabase
-        .from('appointment') // Change to your table name
+        .from('appointment')
         .insert([appointmentDetails]);
   
-      if (error) throw error; // Handle errors
+      if (error) throw error; 
   
       alert('Appointment scheduled successfully');
       setFormData({
@@ -49,8 +51,9 @@ export default function Appointment() {
       console.error('Error adding document: ', error.message); // Log the error message
       alert(`Error scheduling appointment: ${error.message}`); // Show user-friendly error
     }
+    navigate('/home')
   };
-  
+    
 
   return (
 
@@ -62,8 +65,10 @@ export default function Appointment() {
           <h1 className='title'>Appointment Form</h1>
         </div>
         <div className="form">
+          {/* Form */}
           <form onSubmit={handleSubmit}>
             <section>
+              {/* info Details */}
               <div className="info-details">
                 <span className="info-global">
                   <label className="labelContainer" htmlFor="name">Name & Surname</label>
@@ -91,7 +96,7 @@ export default function Appointment() {
                 </span>
                 <input id="ID" className="info" name="ID" type="text" value={formData.ID} onChange={handleChange} placeholder="e.g 19435763782894" maxLength="13" required />
               </div>
-
+{/* contact preference */}
               <div className="info-details">
                 <span className="info-global">
                   <label className="labelContainer" htmlFor="contact">Contact Preference:</label>
@@ -102,7 +107,7 @@ export default function Appointment() {
                 </div>
               </div>
             </section>
-
+{/* Appointment Scheduling */}
             <section className="appointment_info">
               <h2 className='appointmentHeading'>Medical Departments of <span className="heading-htmlForm">Appointments</span></h2>
               <p className='appointmentSub'>Please Select Your Appointment:</p>
@@ -136,7 +141,7 @@ export default function Appointment() {
                 </div>
               </div>
             </section>
-
+        {/* this is for the date and time */}
             <div className="app-time">
               <label className="time">Time of the Appointment:
                 <DatePicker

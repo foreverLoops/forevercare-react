@@ -1,3 +1,4 @@
+/* Modal */
 .btn-modal {
     position: fixed;
     bottom: 20px;
@@ -17,6 +18,7 @@
 }
 
 .modal {
+    color: #000;
     position: fixed;
     top: 0;
     left: 0;
@@ -46,7 +48,7 @@
         opacity: 1;
     }
 }
-
+/* Form styles */
 .form-container {
     display: flex;
     flex-direction: column;
@@ -61,7 +63,7 @@
 .form-label {
     font-weight: bold;
 }
-
+/* input fields */
 .user-input {
     border: 2px solid #56b5e3;
     border-radius: 5px;
@@ -71,7 +73,7 @@
     width: 100%;
     box-sizing: border-box;
 }
-
+/* Textarea */
 .textarea-container {
     border: 2px solid #56b5e3;
     border-radius: 5px;
@@ -91,7 +93,7 @@
 .input-labels {
     margin: 5px 0;
 }
-
+/* submit button */
 .submitButtonContainer {
     display: flex;
     justify-content: space-between;
