@@ -123,3 +123,27 @@
     margin-top: 0;
   }
 }
+
+.Terms_Login{
+  display: flex;
+  align-items: center;
+}
+
+.terms{
+  margin-right: 10px;
+}
+.terms_checkbox{
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 834px) {
+  .main_logo {
+      display: none;
+  }
+  .terms{
+    margin-bottom: 16px;
+    margin-left: 6px;
+  }
+}
+
+

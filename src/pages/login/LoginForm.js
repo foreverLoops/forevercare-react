@@ -21,14 +21,20 @@ const LoginForm = () => {
           <br />
           <p className="ForgotPassword"><a href="/public/forgotpassword.html">Forgot Password</a></p>
           <br />
+          <div className='Terms_Login'> 
+          <div className='terms_checkbox'>
           <input className='Checkbox' type="checkbox" id="terms" name="terms" required/>
+          </div>
+          <div className='terms'>
                 <label className='terms' for="terms">I agree with Forever's care Terms of Service, Privacy Policy and default Notification Settings
                 </label>
+           </div>
+          </div>
 
           <br />
           <button className='SignIn' type="submit">Sign In </button>  
           <br />
-          <p className='signup'>Do not have an account? <Link to="/SignUpForm">Sign Up</Link></p>         
+          <p className='signup'>Do not have an account?<Link to="/SignUpForm">Sign Up</Link></p>         
         </form>
       </div>
       <div className="main_logo">
