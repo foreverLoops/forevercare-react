@@ -1,8 +1,41 @@
 import React from 'react';
-import './LoginForm.css'; // Import the CSS file
+import { useState } from "react";
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import './LoginForm.css'; // Import the CSS file
+import {supabase} from "../../supabaseClient";
 
-const LoginForm = () => {
+
+const LoginForm = (props) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate(); 
+  const { signIn } = props
+  
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
+
+      if (error) {
+        console.error("Error signing in:", error.message);
+      } else {
+        console.log("User signed in:", data.user.id);
+        // Redirect the user to the home page
+        navigate("/home");
+
+      }
+    } catch (error) {
+      console.error("Error signing in:", error.message);
+    }
+  };
+
+
   return (
     <div className='body'>
     <div className='main-div '>
@@ -12,21 +45,21 @@ const LoginForm = () => {
             <h1 className='h1'>Welcome</h1>
           </div>
           <br />
-          <label className='labels' htmlForfor='email'>Email</label>
-          <input className='inputs' type="email" id='email' name='email' placeholder='example@gmail.com' />
+          <label className='labels' htmlFor='email'>Email</label>
+          <input className='inputs' type="email" id='email' name='email' placeholder='example@gmail.com' value={email} onChange={(e) => setEmail(e.target.value)} />
           
           <br />
-          <label  className='labels' for="password">Password</label>
-          <input className='inputs' type="password" id="password" name="password" pattern="(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,12}" title="Password must be 6 to 12 characters, and include at least one letter, one number, and one special character." placeholder="********" required/>
+          <label  className='labels' htmlFor="password">Password</label>
+          <input className='inputs' type="password" id="password" name="password" pattern="(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,12}" title="Password must be 6 to 12 characters, and include at least one letter, one number, and one special character." value={password} onChange={(e) => setPassword(e.target.value)} placeholder="********" required/>
           <br />
-          <p className="ForgotPassword"><a href="/public/forgotpassword.html">Forgot Password</a></p>
+          <p className="ForgotPassword"><Link to="/forgotpassword">Forgot Password</Link></p>
           <br />
           <input className='Checkbox' type="checkbox" id="terms" name="terms" required/>
-                <label className='terms' for="terms">I agree with Forever's care Terms of Service, Privacy Policy and default Notification Settings
+                <label className='terms' htmlFor="terms">I agree with Forever's care Terms of Service, Privacy Policy and default Notification Settings
                 </label>
 
           <br />
-          <button className='SignIn' type="submit">Sign In </button>  
+          <button className='SignIn' onClick={handleSubmit} type="submit">Sign In </button>  
           <br />
           <p className='signup'>Do not have an account? <Link to="/SignUpForm">Sign Up</Link></p>         
         </form>
