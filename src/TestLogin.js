@@ -1,59 +1,115 @@
-import React, { useState } from 'react';
-import { supabase } from './supabaseClient.js';
+// // @ts-nocheck
+// import { useState } from "react";
+// import { useNavigate } from 'react-router-dom'; // Using useNavigate instead of useHistory
+// import supabase from "./supabaseClient";
+// import Container from "@mui/material/Container";
+// import Avatar from "@mui/material/Avatar";
+// import Button from "@mui/material/Button";
+// import CssBaseline from "@mui/material/CssBaseline";
+// import TextField from "@mui/material/TextField";
+// import Link from "@mui/material/Link";
+// import Grid from "@mui/material/Grid";
+// import Box from "@mui/material/Box";
+// import Typography from "@mui/material/Typography";
+// import "../src/index.css";
 
-const TestLogin = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState(null);
+// const Login = (props) => {
+//   const [email, setEmail] = useState("");
+//   const [password, setPassword] = useState("");
+//   const navigate = useNavigate(); 
+//   const { signIn } = props
+  
 
-  const handleLogin = async (event) => {
-    event.preventDefault();
+//   const handleSubmit = async (event) => {
+//     event.preventDefault();
 
-    const { error } = await supabase.auth.signIn({
-      email,
-      password,
-    });
+//     try {
+//       const { data, error } = await supabase.auth.signInWithPassword({
+//         email,
+//         password,
+//       });
 
-    if (error) {
-      setError(error.message);
-    } else {
-      // Optionally, redirect the user or show a success message
-      console.log('Login successful');
-      // Redirect logic here (e.g., using React Router)
-    }
-  };
+//       if (error) {
+//         console.error("Error signing in:", error.message);
+//       } else {
+//         console.log("User signed in:", data.user.id);
+//         // Redirect the user to the home page
+//         navigate("/");
+//         signIn();
+//       }
+//     } catch (error) {
+//       console.error("Error signing in:", error.message);
+//     }
+//   };
 
-  return (
-    <div className='Main_Login'>
-      <div className='Body_Login'>
-        <div className="Login">
-          <div className="Header">Login</div>
-          {error && <p className="error">{error}</p>}
-          <form className="LoginForm" onSubmit={handleLogin}>
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
+//   return (
+//     <Container component="main" maxWidth="xs">
+//       <CssBaseline />
+//       <Box
+//         sx={{
+//           marginTop: 8,
+//           display: "flex",
+//           flexDirection: "column",
+//           alignItems: "center",
+//         }}
+//       >
+//         <Avatar sx={{ m: 1, bgcolor: "crimson" }}>
+//         </Avatar>
+//         <Typography component="h1" variant="h5">
+//           Log in
+//         </Typography>
+//         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+//           <TextField
+//             margin="normal"
+//             required
+//             fullWidth
+//             InputLabelProps={{ style: { color: 'crimson' } }}
+//             id="email"
+//             label="Email Address"
+//             name="email"
+//             autoComplete="email"
+//             autoFocus
+//             value={email}
+//             onChange={(e) => setEmail(e.target.value)}
+//           />
+//           <TextField
+//             margin="normal"
+//             required
+//             fullWidth
+//             InputLabelProps={{ style: { color: 'crimson' } }}
+//             name="password"
+//             label="Password"
+//             type="password"
+//             id="password"
+//             autoComplete="current-password"
+//             value={password}
+//             onChange={(e) => setPassword(e.target.value)}
+//           />
+//           <Button
+//             type="submit"
+//             class="login-button"
+//             fullWidth
+//             variant="contained" 
+//             sx={{ mt: 3, mb: 2, bgcolor: "crimson"}}
+//           >
+//             Log In
+//           </Button>
+//           <Grid container>
+//             <Grid item xs>
+//               <Link href="#" variant="body2">
+//                 Did you forget your password?
+//               </Link>
+//             </Grid>
+//             <Grid item>
+//               <Link href= "/signup" variant="body2">
+//                 {"Don't have an account? Sign Up"}
+//               </Link>
+//             </Grid>
+//           </Grid>
+//         </Box>
+//       </Box>
+//     </Container>
+//   );
+// };
 
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-
-            <button className='Submit_Login' type="submit">Login</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default TestLogin;
+// export default Login;
