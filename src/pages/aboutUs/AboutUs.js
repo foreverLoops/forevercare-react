@@ -22,12 +22,12 @@ export default function AboutUs() {
     {
       id: 3,
       label: "Healthcare Proffesionals",
-      href: "#services"
+      href: "#doctors"
     },
     {
       id: 4,
       label: "Development Team",
-      href: "#contact"
+      href: "#devTeam"
     }]
 
 
@@ -74,7 +74,7 @@ export default function AboutUs() {
         {/* Carousel Section */}
         <section className="carousel">
           <div className="card-wrapper container">
-            <i id="left" className="fa-solid fa-circle-arrow-left"></i>
+            
             <div className="card-list">
               <div className="card-item box1">
                 <div className="card-link">
@@ -100,14 +100,7 @@ export default function AboutUs() {
                   <p className="badge Mission">We are committed to delivering exceptional medical care, education, and research to improve the healthcare and well-being of our patients.</p>
                 </div>
               </div>
-              <div className="card-item box1">
-                <div className="card-link">
-                  <h3 className="card-title vision">Vision</h3>
-                  <p className="badge">“Transforming healthcare to improve lives”</p>
-                </div>
-              </div>
             </div>
-            <i id="right" className="fa-solid fa-circle-arrow-right"></i>
           </div>
         </section>
         
@@ -134,8 +127,8 @@ export default function AboutUs() {
               <p className="name">Aphiwe Ncayiyane</p>
               <p className="quote">"How is never as important as why"</p>
               <div className="social-icons">
-                <a href="#"><i className="fa-brands fa-github"></i></a>
-                <a href="#"><i className="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/ncayiyane"><i className="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/aphiwe-ncayiyane-4149b31a8"><i className="fa-brands fa-linkedin"></i></a>
               </div>
             </div>
             <div className="team-member">
@@ -147,7 +140,7 @@ export default function AboutUs() {
                 <a href="www.linkedin.com/in/jaleel-lee-6b441920b"><i className="fa-brands fa-linkedin"></i></a>
               </div>
             </div>
-            <div className="team-member">
+            <div  className="team-member">
               <img src="/media/petersen.jpg" alt="Profile Picture" className="avatar" />
               <p className="name">Shabbeer Petersen</p>
               <p className="quote">"Everything you've done up until<br/>now has not gone to waste."</p>
@@ -161,8 +154,8 @@ export default function AboutUs() {
               <p className="name">Yusri Nelson</p>
               <p className="quote">"Futures don't make themselves,<br/> you create them."</p>
               <div className="social-icons">
-                <a href="#"><i className="fa-brands fa-github"></i></a>
-                <a href="#"><i className="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/yusrinelson"><i className="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/yusri-nelson/"><i className="fa-brands fa-linkedin"></i></a>
               </div>
             </div>
             <div className="team-member">
