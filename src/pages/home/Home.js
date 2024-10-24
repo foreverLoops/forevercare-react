@@ -62,7 +62,7 @@ export default function Home() {
             </Link>
           </div>
         </section>
-        <aside id='aside'>
+        <aside id='home-aside'>
           <div className="about-img">
 
           </div>
