@@ -154,8 +154,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <a href="#navbar"><span class="toTop">
-            <i class="fa-solid fa-caret-up"></i>
+      <a href="#navbar"><span className="toTop">
+            <i className="fa-solid fa-caret-up"></i>
         </span>
     </a>
       <Footer />
