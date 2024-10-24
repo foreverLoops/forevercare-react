@@ -21,11 +21,12 @@ const SignUpForm = () => {
               <label className="Date" htmlFor="date"></label>
               <input className="Date" type="date" id="date" name="date" required />
             </div>
-            <hr />
+            <hr className="Line" />
 
             <h2 className="Patient_Details">Patient Details</h2>
+            
             <div className="Patient_Details_Form">
-             
+            <div className="Patient_Box">
               <label className="Patient_" htmlFor="name"></label>
               <input className="Patient_" type="text" name="name" id="name" placeholder="First Name" required />
 
@@ -41,6 +42,9 @@ const SignUpForm = () => {
 
               <label htmlFor="age"></label>
               <input type="number" name="age" id="age" placeholder="Age" required />
+
+              <label htmlFor="day"></label>
+              <input type="number" id="day" name="day" placeholder="Day" min="1" max="31" required />
 
               <label className='SignUp_Moths' htmlFor="month"></label>
               <select name="month" id="month" required>
@@ -59,14 +63,28 @@ const SignUpForm = () => {
                 <option value="December">December</option>
               </select>
 
-              <label htmlFor="day"></label>
-              <input type="number" id="day" name="day" placeholder="Day" min="1" max="31" required />
-
               <label htmlFor="year"></label>
               <input type="number" id="year" name="year" placeholder="Year" min="1900" required />
 
+              <label htmlFor="idtype"></label>
+              <select name="idtype" id="idtype" required>
+                <option value="" disabled hidden>Select ID Type</option>
+                <option value="National ID">National ID</option>
+                <option value="Passport">Passport</option>
+                <option value="Driver's License">Driver's License</option>
+              </select>
+
               <label htmlFor="idnumber"></label>
               <input type="text" id="idnumber" name="idnumber" placeholder="ID Number/Passport" required />
+
+              <label htmlFor="Status"></label>
+              <select name="Status" id="Status" required>
+                <option value="" disabled hidden>Select Status</option>
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+                <option value="Divorced">Divorced</option>
+                <option value="Widowed">Widowed</option>
+              </select>
 
               <label htmlFor="phone"></label>
               <input type="tel" id="phone" name="phone" placeholder="Phone Number" required />
@@ -86,8 +104,12 @@ const SignUpForm = () => {
               />
               <label htmlFor="password2"></label>
               <input type="password" id="password2" name="confirm_password" placeholder="Confirm Password" required />
+              </div>
+
+             
 
               <h3 className="Header_3">Address</h3>
+              <div className="Address_Box">
               <label htmlFor="address1"></label>
               <input type="text" id="address1" name="address1" placeholder="Street Address Line 1" required />
 
@@ -113,6 +135,7 @@ const SignUpForm = () => {
 
               <label htmlFor="postalCode"></label>
               <input type="text" id="postalCode" name="postalCode" placeholder="Postal/Zip Code" required />
+              </div>
 
               <h3 className="Header_3">Is the Patient Younger Than 18?</h3>
               <input className='Radio' type="radio" id="yes" name="under18" value="yes" />
@@ -148,23 +171,28 @@ const SignUpForm = () => {
               <h3 className="Header_3">Health History</h3>
               <textarea className='Text' id="text" name="text" placeholder="Write something.." required></textarea>
 
-              <h3 className="Patient_Details">Medical History</h3>
 
-              <h3 className="Header_3">Taking any Medications currently</h3>
-              <input type="radio" id="yes" name="medications" value="yes" />
-              <label htmlFor="yes">Yes</label>
-              <input type="radio" id="no" name="medications" value="no" />
-              <label htmlFor="no">No</label>
+              <h3 className="Header_3">Taking Any Medications Currently</h3>
+              <input className='Radio' type="radio" id="yes" name="medications" value="yes" />
+              <label className='Yes' htmlFor="yes">Yes</label>
+              <input className='Radio' type="radio" id="no" name="medications" value="no" />
+              <label className='No' htmlFor="no">No</label>
+
+              <textarea className='Text_Med' id="text" name="text" placeholder="Write something.." required></textarea>
               <hr />
 
               <h2 className="Header_3">Insurance Information</h2>
+
+              <div className='Insurance_Box'>
               <label htmlFor="insurance"></label>
               <input type="text" id="insurance" name="insurance" placeholder="Insurance Company" required />
               <label htmlFor="id_Insurance"></label>
               <input type="text" id="insuranceID" name="insuranceID" placeholder="Insurance ID" />
+              </div>
 
               <h4 className="Header_3">Policy Holder's Details</h4>
 
+              <div className='Insurance_Box'>
               <label htmlFor="firstname"></label>
               <input type="text" id="firstname" name="firstname" placeholder="First Name" required />
 
@@ -176,9 +204,10 @@ const SignUpForm = () => {
 
               <label htmlFor="phone"></label>
               <input type="text" id="phone" name="phone" placeholder="Phone Number" required />
-
-
+              </div>
+              <div className="Submit_Box">
               <button className="SignUp" type="submit">Submit</button>
+              </div>
             </div>
           </form>
         </div>

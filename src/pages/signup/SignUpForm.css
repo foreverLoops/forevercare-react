@@ -10,8 +10,13 @@
 
 .Body_SignUp {
   padding: 0 12px;
-  width: 50vw;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 4px solid black;
+  border-image:linear-gradient( to top, hsla(184, 55%, 88%, 0.486), rgba(18, 202, 202, 0.493) )1;
+  width: 60vw;
   align-items: center;
   justify-content: center;
   background-color: #BBE6E4;
@@ -33,9 +38,7 @@
   text-decoration: solid;
 }
 
-.Header:hover {
-  box-shadow: 0 12px 16px 0 rgba(30, 37, 37, 0.397);
-}
+
 
 /* Intro Section */
 .Intro {
@@ -44,12 +47,13 @@
   justify-content: center;
   flex-direction: column;
   font-weight: bold;
-  margin:0 20px;
+  margin: 20px;
  
 }
 
 .Header_1{
   font-size:x-large;
+  margin: 20px;
 }
 .Header_2{
   font-size: larger;
@@ -90,14 +94,14 @@
 .Patient_Details{
   text-align: center;
 }
-/* .Patient_Details_Form {
- 
-} */
+.Patient_Box{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
 
-/* .Patient_Details_Form label {
-  font-size: large;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-} */
+}
+
 .Patient_Details_Form input[type="text"],
 .Patient_Details_Form input[type="number"],
 .Patient_Details_Form input[type="tel"],
@@ -113,6 +117,8 @@
 }
 
 textarea {
+  align-items: center;
+  justify-content: center;
   width: 100%;
   border: 2px solid rgb(52, 153, 160);
   border-radius: 4px;
@@ -128,6 +134,32 @@ textarea {
   padding: 12px;
   margin: 8px 3px;
   width: 50vw;
+}
+
+#no:checked ~ .Guardian{  
+  display: none; /* Hide the guardian details form when "No" is checked */
+}
+
+#yes:checked ~ .Text_Med{
+  display: flex; /* Display the text area when "Yes" is checked */
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  margin: 8px 3px;
+  width: 100%;
+}
+
+
+.Text_Med{
+  font-size: large;
+  height: 200px;
+  color: #000000cb;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: 2px solid rgb(52, 153, 160);
+  border-radius: 4px;
+  padding: 12px;
+  margin: 8px 3px;
+  box-sizing: border-box;
 }
 
 .Guardian {
@@ -157,8 +189,27 @@ textarea {
 .Header_3{
   text-align: center;
   font-size: larger;
+  margin: 20px;
+}
+.Address_Box{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .Address input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 2px solid rgb(52, 153, 160);
+  border-radius: 4px;
+}
+
+.Insurance_Box{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.Insurance input[type="text"] {
   width: 100%;
   padding: 12px;
   margin: 8px 0;
@@ -170,6 +221,10 @@ textarea {
 /* Submit Button Section */ 
 
 /* Style for the Submit Button */
+.Submit_Box {
+  display: flex;
+  justify-content: center;
+}
 .SignUp {
     background-color: #4CAF50; /* Green background color */
     color: white; /* White text color */
@@ -214,4 +269,10 @@ input:focus {
 /* Radio Buttons */
 .Radio {
   margin: 8px 12px;
+}
+
+.Line {
+  border-bottom: 2px solid rgb(52, 153, 160);
+  margin: 20px;
+  color: linear-gradient( to top, rgba(165, 213, 214, 0.623), rgb(43, 201, 212) );
 }
