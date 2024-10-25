@@ -30,7 +30,7 @@ export default function Appointment() {
     e.preventDefault();
     const appointmentDetails = { ...formData, time: startDate.toISOString() }; // Convert to ISO string if necessary
     try {
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from('appointment')
         .insert([appointmentDetails]);
   
