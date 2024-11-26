@@ -22,7 +22,7 @@ The ForeverCare React app serves as the frontend for a healthcare management sys
 - **User Authentication**: Secure login and registration for doctors, patients, and admins.
 - **Appointment Management**: Patients can book appointments with available doctors, while doctors manage their schedules.
 - **Medical Records**: Doctors can view and update patient records, including medical histories and prescriptions.
-- **Telemedicine**: Secure video calls between doctors and patients for remote consultations.
+- **TODOTelemedicine**: Secure video calls between doctors and patients for remote consultations.
 - **Prescription Management**: Doctors can generate and share prescriptions with patients.
 - **Responsive UI**: Built with Material-UI and React for a smooth user experience on any device.
 
