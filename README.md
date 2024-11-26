@@ -132,7 +132,7 @@ This will create an optimized production build in the build folder. You can depl
 
 ### Run it remotely
 
-<https://forevercarenew.netlify.app/> 
+<https://forevercarenew.netlify.app/>
 
 ### Usage (TODO)
 
