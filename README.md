@@ -9,8 +9,6 @@ A comprehensive healthcare platform built with React for managing patient record
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ## Overview
@@ -134,7 +132,7 @@ This will create an optimized production build in the build folder. You can depl
 
 <https://forevercarenew.netlify.app/>
 
-### Usage (TODO)
+## Usage
 
 Once the app is running, you can access various features depending on your user role (doctor, patient, or admin):
 
@@ -143,7 +141,8 @@ Once the app is running, you can access various features depending on your user 
 - Admins: Manage users, view appointments, and oversee the platform.
 Contributing
 
-Contact
+## Contact
+
 If you have any questions, suggestions, or feedback, feel free to open an issue or contact the project maintainers:
 
 Email: <shabbeerpetersen10@gmail.com>
