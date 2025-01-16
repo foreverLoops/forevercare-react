@@ -10,7 +10,6 @@ const LoginForm = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate(); 
-  const { signIn } = props
   
 
   const handleSubmit = async (event) => {
