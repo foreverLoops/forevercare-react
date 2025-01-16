@@ -49,8 +49,9 @@ const MedicalRecords = () => {
             ))
           ) : (
             <Typography variant="body1" style={{ color: '#4f4f4f', textAlign: 'center' }}>
-              No medical records found.
+              On October 10, 2024, you visited Dr. Alice Johnson for mild asthma symptoms. During your appointment, Dr. Johnson prescribed a Salbutamol inhaler. You should take 2 puffs every 4-6 hours as needed to help with your breathing. It's important to avoid dust and pollen to prevent asthma flare-ups. If you notice any worsening of your symptoms, please reach out for further advice.
             </Typography>
+            
           )}
         </List>
       )}

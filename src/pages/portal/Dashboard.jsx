@@ -32,10 +32,40 @@ const Dashboard = () => {
             border: '2px solid #327f92' // Teal border for alignment with login page
           }}>
           <Typography variant="h4" gutterBottom style={{ fontWeight: 600, color: '#327f92' }}>
-            Welcome, [Patient Name]!
+            Welcome, John Doe!
           </Typography>
           <Typography variant="body1" style={{ color: '#4f4f4f' }}>
-            Here’s an overview of your health information and upcoming appointments.
+            Current Conditions:
+<br/>
+            Asthma: Mild asthma diagnosed on October 10, 2024. You are prescribed a Salbutamol inhaler for symptom management. Remember to take 2 puffs every 4-6 hours as needed.
+            Recent Appointments:
+            <br/>
+            October 10, 2024: Consultation with Dr. Alice Johnson for asthma symptoms.
+            Medications:
+            <br/>
+            Salbutamol Inhaler: Take 2 puffs as needed for asthma.
+            Health Tips:
+            <br/>
+            Avoid known triggers such as dust and pollen to help manage your asthma effectively.
+            <br/>
+            Upcoming Appointments:
+            <br/>
+            Appointment with Dr. Alice Johnson
+            <br/>
+            Date: October 15, 2024
+            <br/>
+            Time: 3:00 PM
+            <br/>
+            Location: Health Clinic, Room 204
+            Follow-Up Appointment Recommended
+
+            
+            <br/>
+            Due Date: November 10, 2024 
+            <br/>
+            if symptoms persist.
+            <br/>
+            Note: Contact us to schedule if you notice any changes in your condition.
           </Typography>
         </Paper>
       </Grid2>

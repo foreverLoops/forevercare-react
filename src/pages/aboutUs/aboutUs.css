@@ -250,7 +250,7 @@ background-color: #f5f7f61e;
     white-space: wrap;
     scroll-behavior: smooth;
     margin: 0;
-    margin-left: 150px;
+    /* margin-left: 150px; */
     padding: 0;  
 }
 .container{

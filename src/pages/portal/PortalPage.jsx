@@ -15,7 +15,7 @@ const PortalPage = () => {
             Dashboard
           </Button>
           <Button component={Link} to="/appointment" color="inherit">
-            Appointments
+            Book Appointment
           </Button>
           <Button component={Link} to="/portal/medical-records" color="inherit">
             Medical Records

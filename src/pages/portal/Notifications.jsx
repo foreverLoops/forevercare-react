@@ -5,6 +5,7 @@ const Notifications = () => {
   const notifications = [
     { message: 'Appointment with Dr. Smith on 25th Oct', date: '2024-10-24' },
     { message: 'Time to refill your prescription for blood pressure', date: '2024-10-20' },
+    { message: '', date: '2024-10-20' },
   ];
 
   return (
