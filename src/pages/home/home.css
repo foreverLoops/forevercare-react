@@ -979,6 +979,11 @@ margin: 4rem;
     .navbar ul {
         width: 50vw;
     }
+
+    .nav-links.active {
+        width: 60vw;
+    }
+    
     .departments-box, .services-box {
         width: 50vw;
     }
