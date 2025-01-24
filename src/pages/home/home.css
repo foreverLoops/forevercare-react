@@ -156,11 +156,11 @@ h1, h2, h3, h4, h5, h6, p {
 .about{
     /* background-color: #BBE6E4 ; */
     background-image: linear-gradient(to right,#BBE6E4, #EAEFF2) ;
-    height: 50vh;
+    height: max-content;
     border-top:  2px solid #327f92;
 }
 #home-aside{
-    height: 50vh;
+    /* height: 50vh; */
     background-color: #2c6979;
     background: url("/public/media/about-img2.jpg");
     background-position: center;
@@ -310,7 +310,7 @@ h1, h2, h3, h4, h5, h6, p {
 .navigation-manual{
     position: absolute;
     width: 360px;
-    margin-top: 38vh;
+    margin-top: 49vh;
     display: flex;
     justify-content: center;
 }
@@ -345,7 +345,7 @@ h1, h2, h3, h4, h5, h6, p {
     position: absolute;
     display: flex;
     width: 360px;
-    margin-top: 38vh;
+    margin-top: 49vh;
     justify-content: center;
 }
 .navigation-auto div{
@@ -959,6 +959,7 @@ margin: 4rem;
     }
     .instruction-info p {
         width: 90vw;
+        margin-bottom: 3rem;
         justify-content: left;
         color: white;
         font-size: 1.2rem;
@@ -1041,7 +1042,6 @@ margin: 4rem;
         margin-bottom: 1rem;
     }
     #footer {
-        flex-direction: row;
         padding: 0 4rem;
     }
     #footer .footer_list-box{
@@ -1142,6 +1142,21 @@ margin: 4rem;
     .navigation-manual , .navigation-auto{
         width: 300px;
 
+    }
+    .manual-btn:hover{
+        background: #327f92;
+    }
+    #radio1:checked ~ .first{
+        margin-left: 0;
+    } 
+    #radio2:checked ~ .first{
+        margin-left: -317px;
+    }
+    #radio3:checked ~ .first{
+        margin-left: -637px;
+    }
+    #radio4:checked ~ .first{
+        margin-left: -955px;
     }
     
     .form-box {
