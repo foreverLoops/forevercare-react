@@ -86,7 +86,7 @@ export default function Home() {
           {departments.map((department) => (
             <div className="departments-box" key={department.id}>
               <i className={`fa-solid ${department.icon}`}></i>
-              <h5>{department.title}(ED)</h5>
+              <h5>{department.title}</h5>
               <p>{department.description}</p>
             </div>
           ))}
