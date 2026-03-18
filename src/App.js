@@ -17,7 +17,7 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path='/home' element={<Home />}/>
+      <Route path='/' element={<Home />}/>
       <Route path='/about' element={<AboutUs/>}/>
       <Route path='/appointment' element={<Appointment/>}/>
       <Route path="/portal" element={<PortalPage />}>
@@ -26,7 +26,7 @@ function App() {
           <Route path="medical-records" element={<MedicalRecords />} />
           <Route path="notifications" element={<Notifications />} />
         </Route>
-      <Route path='/' element={<LoginForm/>}/>
+      <Route path='/login' element={<LoginForm/>}/>
       <Route path='/SignUpForm' element={<SignUpForm/>}/>
       <Route path='/modal' element={<Modal/>}/>
 

@@ -110,7 +110,7 @@ const SignUpForm = () => {
       return;
     }
 
-    navigate('/home');
+    navigate('/login');
   };
 
   return (

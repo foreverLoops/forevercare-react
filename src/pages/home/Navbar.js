@@ -43,7 +43,7 @@ export default function Navbar({ navLinks }) {
               <p className="home-logout" onClick={handleLogout}>Logout</p>
             ) : (
               <>
-                <Link to="/">Login</Link> | <Link to="/SignupForm">Signup</Link>
+                <Link to="/login">Login</Link> | <Link to="/SignupForm">Signup</Link>
               </>
             )}
           </li>

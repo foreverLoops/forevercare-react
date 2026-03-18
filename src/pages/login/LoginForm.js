@@ -26,7 +26,7 @@ const LoginForm = (props) => {
       } else {
         console.log("User signed in:", data.user.id);
         // Redirect the user to the home page
-        navigate("/home");
+        navigate("/");
 
       }
     } catch (error) {

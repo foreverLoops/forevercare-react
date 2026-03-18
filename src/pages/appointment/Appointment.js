@@ -51,7 +51,7 @@ export default function Appointment() {
       console.error('Error adding document: ', error.message); // Log the error message
       alert(`Error scheduling appointment: ${error.message}`); // Show user-friendly error
     }
-    navigate('/home')
+    navigate('/')
   };
     
 
